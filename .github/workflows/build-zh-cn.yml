@@ -22,16 +22,20 @@ jobs:
 
       - name: Prepare Chinese build directory
         run: |
-          mkdir zh-build
+          mkdir -p zh-build
           cp zh-cn/*.md zh-build/
           cp zh-cn/book.json zh-build/
           cp -r programs zh-build/
           cp -r img zh-build/
+          ls zh-build/
+
+      - name: Install Honkit
+        run: npm install honkit --save-dev
 
       - name: Run Honkit
         run: |
-          npm install honkit --save-dev
           npx honkit build ./zh-build ./public
+          ls public/
 
       - name: Push to GitHub Pages
         if: success()
