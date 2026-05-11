@@ -1,4 +1,4 @@
-# 更多
+﻿# 更多
 
 到目前为止，我们已经涵盖了你会使用的大部分 Python 方面。在本章中，我们将介绍更多方面，使我们的 Python 知识更加全面。
 
@@ -75,11 +75,11 @@ Yes
 
 示例（保存为 `more_lambda.py`）：
 
-<pre><code class="lang-python">{% include "./programs/more_lambda.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/more_lambda.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/more_lambda.txt" %}</code></pre>
+<pre><code>{% include "programs/more_lambda.txt" %}</code></pre>
 
 **工作原理**
 
@@ -91,11 +91,11 @@ Yes
 
 示例（保存为 `more_list_comprehension.py`）：
 
-<pre><code class="lang-python">{% include "./programs/more_list_comprehension.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/more_list_comprehension.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/more_list_comprehension.txt" %}</code></pre>
+<pre><code>{% include "programs/more_list_comprehension.txt" %}</code></pre>
 
 **工作原理**
 
@@ -145,11 +145,11 @@ AssertionError
 
 装饰器（decorator）是应用包装函数的快捷方式。这对于用相同的代码反复"包裹"功能非常有帮助。例如，我为自己创建了一个 `retry` 装饰器，可以将其应用于任何函数，如果在运行期间抛出任何异常，它会重试，最多重试 5 次，每次重试之间有延迟。这对于尝试向远程计算机进行网络调用的情况特别有用：
 
-<pre><code class="lang-python">{% include "./programs/more_decorator.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/more_decorator.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/more_decorator.txt" %}</code></pre>
+<pre><code>{% include "programs/more_decorator.txt" %}</code></pre>
 
 **工作原理**
 

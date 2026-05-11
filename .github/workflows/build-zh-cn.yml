@@ -4,6 +4,17 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'zh-cn/**'
+      - 'programs/**'
+      - 'img/**'
+      - '.github/workflows/build-zh-cn.yml'
+
+# 添加权限配置
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-zh-cn:
@@ -36,15 +47,16 @@ jobs:
       - name: Run Honkit
         run: |
           echo "=== Running Honkit build ==="
-          npx honkit build ./zh-build ./public
+          npx honkit build ./zh-build ./public --log=debug
           echo "=== Build output ==="
           ls -la public/
 
-      - name: Push to GitHub Pages
+      - name: Push to GitHub Pages (Chinese)
         if: success()
         uses: crazy-max/ghaction-github-pages@v4
         with:
-          target_branch: gh-pages
+          target_branch: gh-pages-zh
           build_dir: public
+          fqdn: python-zh.swaroopch.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

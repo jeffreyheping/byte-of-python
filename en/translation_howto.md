@@ -1,4 +1,4 @@
-# Translation How-to {#translation-howto}
+﻿# Translation How-to {#translation-howto}
 
 1. The full source of the book is available from {{ book.sourceUrl }}.
 2. Please [fork the repository](https://help.github.com/articles/fork-a-repo).

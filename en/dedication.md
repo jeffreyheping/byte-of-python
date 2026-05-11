@@ -1,4 +1,4 @@
-# Dedication
+﻿# Dedication
 
 To [Kalyan Varma](http://www.kalyanvarma.net/) and many other seniors at [PESIT](http://www.pes.edu/) who introduced us to GNU/Linux and the world of open source.
 

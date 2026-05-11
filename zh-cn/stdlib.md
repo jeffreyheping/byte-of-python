@@ -1,4 +1,4 @@
-# 标准库 {#stdlib}
+﻿# 标准库 {#stdlib}
 
 Python 标准库包含大量有用的模块，是每个标准 Python 安装的一部分。熟悉 Python 标准库很重要，因为如果你了解这些库能做的事情的范围，很多问题可以快速解决。
 
@@ -33,11 +33,11 @@ True
 
 保存为 `stdlib_logging.py`：
 
-<pre><code class="lang-python">{% include "./programs/stdlib_logging.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/stdlib_logging.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/stdlib_logging.txt" %}</code></pre>
+<pre><code>{% include "programs/stdlib_logging.txt" %}</code></pre>
 
 `cat` 命令用于在命令行中读取 'test.log' 文件。如果 `cat` 命令不可用，你可以在文本编辑器中打开 `test.log` 文件。
 

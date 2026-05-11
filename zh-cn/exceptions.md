@@ -1,4 +1,4 @@
-# 异常
+﻿# 异常
 
 当你的程序中出现_异常_情况时，就会发生异常（exception）。例如，如果你要读取一个文件但文件不存在怎么办？或者如果程序运行时你不小心删除了它怎么办？这些情况使用**异常**来处理。
 
@@ -38,11 +38,11 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 示例（保存为 `exceptions_handle.py`）：
 
-<pre><code class="lang-python">{% include "./programs/exceptions_handle.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/exceptions_handle.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/exceptions_handle.txt" %}</code></pre>
+<pre><code>{% include "programs/exceptions_handle.txt" %}</code></pre>
 
 **工作原理**
 
@@ -64,11 +64,11 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 示例（保存为 `exceptions_raise.py`）：
 
-<pre><code class="lang-python">{% include "./programs/exceptions_raise.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/exceptions_raise.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/exceptions_raise.txt" %}</code></pre>
+<pre><code>{% include "programs/exceptions_raise.txt" %}</code></pre>
 
 **工作原理**
 
@@ -82,11 +82,11 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 将此程序保存为 `exceptions_finally.py`：
 
-<pre><code class="lang-python">{% include "./programs/exceptions_finally.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/exceptions_finally.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/exceptions_finally.txt" %}</code></pre>
+<pre><code>{% include "programs/exceptions_finally.txt" %}</code></pre>
 
 **工作原理**
 
@@ -104,7 +104,7 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 保存为 `exceptions_using_with.py`：
 
-<pre><code class="lang-python">{% include "./programs/exceptions_using_with.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/exceptions_using_with.py" %}</code></pre>
 
 **工作原理**
 

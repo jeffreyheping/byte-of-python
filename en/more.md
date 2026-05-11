@@ -1,4 +1,4 @@
-# More
+﻿# More
 
 So far we have covered a majority of the various aspects of Python that you will use. In this chapter, we will cover some more aspects that will make our knowledge of Python more well-rounded.
 

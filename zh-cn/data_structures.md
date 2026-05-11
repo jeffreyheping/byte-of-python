@@ -1,4 +1,4 @@
-# 数据结构 {#data-structures}
+﻿# 数据结构 {#data-structures}
 
 数据结构（data structure）基本上就是——它们是可以将一些*数据*组织在一起的*结构*。换句话说，它们用于存储一组相关的数据。
 
@@ -22,11 +22,11 @@ Python 中有四种内置的数据结构——_list（列表）、tuple（元组
 
 示例（保存为 `ds_using_list.py`）：
 
-<pre><code class="lang-python">{% include "./programs/ds_using_list.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/ds_using_list.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/ds_using_list.txt" %}</code></pre>
+<pre><code>{% include "programs/ds_using_list.txt" %}</code></pre>
 
 **工作原理**
 
@@ -54,11 +54,11 @@ Python 中有四种内置的数据结构——_list（列表）、tuple（元组
 
 示例（保存为 `ds_using_tuple.py`）：
 
-<pre><code class="lang-python">{% include "./programs/ds_using_tuple.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/ds_using_tuple.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/ds_using_tuple.txt" %}</code></pre>
+<pre><code>{% include "programs/ds_using_tuple.txt" %}</code></pre>
 
 **工作原理**
 
@@ -92,11 +92,11 @@ Python 中有四种内置的数据结构——_list（列表）、tuple（元组
 
 示例（保存为 `ds_using_dict.py`）：
 
-<pre><code class="lang-python">{% include "./programs/ds_using_dict.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/ds_using_dict.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/ds_using_dict.txt" %}</code></pre>
+<pre><code>{% include "programs/ds_using_dict.txt" %}</code></pre>
 
 **工作原理**
 
@@ -126,11 +126,11 @@ Python 中有四种内置的数据结构——_list（列表）、tuple（元组
 
 示例（保存为 `ds_seq.py`）：
 
-<pre><code class="lang-python">{% include "./programs/ds_seq.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/ds_seq.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/ds_seq.txt" %}</code></pre>
+<pre><code>{% include "programs/ds_seq.txt" %}</code></pre>
 
 **工作原理**
 
@@ -197,11 +197,11 @@ True
 
 示例（保存为 `ds_reference.py`）：
 
-<pre><code class="lang-python">{% include "./programs/ds_reference.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/ds_reference.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/ds_reference.txt" %}</code></pre>
+<pre><code>{% include "programs/ds_reference.txt" %}</code></pre>
 
 **工作原理**
 
@@ -221,11 +221,11 @@ True
 
 示例（保存为 `ds_str_methods.py`）：
 
-<pre><code class="lang-python">{% include "./programs/ds_str_methods.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/ds_str_methods.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/ds_str_methods.txt" %}</code></pre>
+<pre><code>{% include "programs/ds_str_methods.txt" %}</code></pre>
 
 **工作原理**
 

@@ -1,4 +1,4 @@
-# Translations
+﻿# Translations
 
 There are many translations of the book available in different human languages, thanks to many tireless volunteers!
 

@@ -1,4 +1,4 @@
-# 问题解决
+﻿# 问题解决
 
 我们已经探索了 Python 语言的各个部分，现在我们将通过设计和编写一个真正_有用_的程序，来看看所有这些部分是如何组合在一起的。目的是学会如何独立编写 Python 脚本。
 
@@ -28,11 +28,11 @@
 
 保存为 `backup_ver1.py`：
 
-<pre><code class="lang-python">{% include "./programs/backup_ver1.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/backup_ver1.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/backup_ver1.txt" %}</code></pre>
+<pre><code>{% include "programs/backup_ver1.txt" %}</code></pre>
 
 现在，我们进入了_测试_阶段，测试程序是否正常工作。如果程序行为不符合预期，我们就需要_调试_程序，即从程序中_去除 bug_（错误）。
 
@@ -74,11 +74,11 @@
 
 保存为 `backup_ver2.py`：
 
-<pre><code class="lang-python">{% include "./programs/backup_ver2.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/backup_ver2.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/backup_ver2.txt" %}</code></pre>
+<pre><code>{% include "programs/backup_ver2.txt" %}</code></pre>
 
 **工作原理**
 
@@ -92,11 +92,11 @@
 
 保存为 `backup_ver3.py`：
 
-<pre><code class="lang-python">{% include "./programs/backup_ver3.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/backup_ver3.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/backup_ver3.txt" %}</code></pre>
+<pre><code>{% include "programs/backup_ver3.txt" %}</code></pre>
 
 **为什么（不）能工作**
 
@@ -108,11 +108,11 @@ _这个程序不能正常工作！_ Python 说有一个语法错误（syntax err
 
 保存为 `backup_ver4.py`：
 
-<pre><code class="lang-python">{% include "./programs/backup_ver4.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/backup_ver4.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/backup_ver4.txt" %}</code></pre>
+<pre><code>{% include "programs/backup_ver4.txt" %}</code></pre>
 
 **工作原理**
 

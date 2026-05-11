@@ -1,4 +1,4 @@
-# 控制流 {#control-flow}
+﻿# 控制流 {#control-flow}
 
 在我们目前看到的程序中，语句总是按照从上到下的精确顺序被 Python 忠实地执行。如果你想改变程序的执行流程呢？例如，你希望程序根据不同的情况做出不同的决策，比如根据一天中的不同时间打印"早上好"或"晚上好"？
 
@@ -11,11 +11,11 @@
 示例（保存为 `if.py`）：
 
 <!-- Tags expansion does not happen inside code blocks https://github.com/GitbookIO/gitbook/issues/707 -->
-<pre><code class="lang-python">{% include "./programs/if.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/if.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/if.txt" %}</code></pre>
+<pre><code>{% include "programs/if.txt" %}</code></pre>
 
 **工作原理**
 
@@ -54,11 +54,11 @@ if True:
 
 示例（保存为 `while.py`）：
 
-<pre><code class="lang-python">{% include "./programs/while.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/while.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/while.txt" %}</code></pre>
+<pre><code>{% include "programs/while.txt" %}</code></pre>
 
 **工作原理**
 
@@ -80,11 +80,11 @@ if True:
 
 示例（保存为 `for.py`）：
 
-<pre><code class="lang-python">{% include "./programs/for.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/for.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/for.txt" %}</code></pre>
+<pre><code>{% include "programs/for.txt" %}</code></pre>
 
 **工作原理**
 
@@ -114,11 +114,11 @@ if True:
 
 示例（保存为 `break.py`）：
 
-<pre><code class="lang-python">{% include "./programs/break.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/break.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/break.txt" %}</code></pre>
+<pre><code>{% include "programs/break.txt" %}</code></pre>
 
 **工作原理**
 
@@ -145,11 +145,11 @@ if you wanna make your work also fun:
 
 示例（保存为 `continue.py`）：
 
-<pre><code class="lang-python">{% include "./programs/continue.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/continue.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/continue.txt" %}</code></pre>
+<pre><code>{% include "programs/continue.txt" %}</code></pre>
 
 **工作原理**
 

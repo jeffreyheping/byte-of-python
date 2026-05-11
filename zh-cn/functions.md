@@ -1,4 +1,4 @@
-# 函数
+﻿# 函数
 
 函数（function）是可重复使用的程序片段。它们允许你给一个语句块命名，以便你可以在程序的任何位置、任意次数地使用该名称来运行这个语句块。这被称为*调用*（calling）函数。我们已经使用了许多内置函数，如 `len` 和 `range`。
 
@@ -8,11 +8,11 @@
 
 示例（保存为 `function1.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function1.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function1.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function1.txt" %}</code></pre>
+<pre><code>{% include "programs/function1.txt" %}</code></pre>
 
 **工作原理**
 
@@ -28,11 +28,11 @@
 
 示例（保存为 `function_param.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function_param.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function_param.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function_param.txt" %}</code></pre>
+<pre><code>{% include "programs/function_param.txt" %}</code></pre>
 
 **工作原理**
 
@@ -46,11 +46,11 @@
 
 示例（保存为 `function_local.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function_local.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function_local.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function_local.txt" %}</code></pre>
+<pre><code>{% include "programs/function_local.txt" %}</code></pre>
 
 **工作原理**
 
@@ -68,11 +68,11 @@
 
 示例（保存为 `function_global.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function_global.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function_global.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function_global.txt" %}</code></pre>
+<pre><code>{% include "programs/function_global.txt" %}</code></pre>
 
 **工作原理**
 
@@ -88,11 +88,11 @@
 
 示例（保存为 `function_default.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function_default.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function_default.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function_default.txt" %}</code></pre>
+<pre><code>{% include "programs/function_default.txt" %}</code></pre>
 
 **工作原理**
 
@@ -114,11 +114,11 @@
 
 示例（保存为 `function_keyword.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function_keyword.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function_keyword.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function_keyword.txt" %}</code></pre>
+<pre><code>{% include "programs/function_keyword.txt" %}</code></pre>
 
 **工作原理**
 
@@ -134,11 +134,11 @@
 
 有时你可能想定义一个可以接受_任意_数量参数的函数，即可**变**数量的**参数**（varargs），这可以通过使用星号来实现（保存为 `function_varargs.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function_varargs.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function_varargs.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function_varargs.txt" %}</code></pre>
+<pre><code>{% include "programs/function_varargs.txt" %}</code></pre>
 
 **工作原理**
 
@@ -154,11 +154,11 @@
 
 示例（保存为 `function_return.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function_return.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function_return.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function_return.txt" %}</code></pre>
+<pre><code>{% include "programs/function_return.txt" %}</code></pre>
 
 **工作原理**
 
@@ -183,11 +183,11 @@ Python 有一个很棒的功能叫做*文档字符串*（documentation string）
 
 示例（保存为 `function_docstring.py`）：
 
-<pre><code class="lang-python">{% include "./programs/function_docstring.py" %}</code></pre>
+<pre><code class="lang-python">{% include "programs/function_docstring.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "./programs/function_docstring.txt" %}</code></pre>
+<pre><code>{% include "programs/function_docstring.txt" %}</code></pre>
 
 **工作原理**
 
