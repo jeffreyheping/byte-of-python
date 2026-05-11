@@ -28,7 +28,7 @@ jobs:
           node-version: '20'
 
       - name: Install HonKit and plugins
-        run: npm install honkit gitbook-plugin-include
+        run: npm install honkit gitbook-plugin-include-codeblock
 
       - name: Prepare build directory
         run: |
