@@ -27,9 +27,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install HonKit
-        run: npm install honkit --save-dev
-
       - name: Prepare build directory
         run: |
           mkdir -p zh-build
@@ -37,12 +34,24 @@ jobs:
           cp zh-cn/book.json zh-build/
           cp -r programs zh-build/
           cp -r img zh-build/
+          echo "=== 目录结构 ===" && ls -la zh-build/
+          echo "=== programs目录 ===" && ls -la zh-build/programs/ | head -10
+
+      - name: Install HonKit
+        run: |
+          cd zh-build
+          npm install honkit --save-dev 2>&1 | tail -20
+          echo "=== npm安装完成 ===" && ls -la node_modules/.bin/ | grep honkit
 
       - name: Build
-        run: npx honkit build ./zh-build ./public --log=debug
+        run: |
+          cd zh-build
+          npx honkit build . ../public --log=debug 2>&1
+          echo "=== 构建完成 ===" 
+          ls -la ../public/ 2>&1 | head -20
 
       - name: Deploy to GitHub Pages
-        if: success()
+        if: success() && always()
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: gh-pages-zh
