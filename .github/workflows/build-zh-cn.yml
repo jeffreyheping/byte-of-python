@@ -27,8 +27,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install HonKit and plugins
-        run: npm install honkit gitbook-plugin-include-codeblock
+      - name: Install HonKit
+        run: npm install honkit --save-dev
 
       - name: Prepare build directory
         run: |
@@ -39,7 +39,7 @@ jobs:
           cp -r img zh-build/
 
       - name: Build
-        run: npx honkit build ./zh-build ./public
+        run: npx honkit build ./zh-build ./public --log=debug
 
       - name: Deploy to GitHub Pages
         if: success()
