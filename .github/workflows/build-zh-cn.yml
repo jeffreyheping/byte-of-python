@@ -10,53 +10,42 @@ on:
       - 'img/**'
       - '.github/workflows/build-zh-cn.yml'
 
-# 添加权限配置
 permissions:
   contents: write
   pages: write
   id-token: write
 
 jobs:
-  build-zh-cn:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Prepare Chinese build directory
+      - name: Prepare build directory
         run: |
           mkdir -p zh-build
           cp zh-cn/*.md zh-build/
           cp zh-cn/book.json zh-build/
           cp -r programs zh-build/
           cp -r img zh-build/
-          echo "=== zh-build contents ==="
-          ls -la zh-build/
-          echo "=== SUMMARY.md ==="
-          cat zh-build/SUMMARY.md
 
-      - name: Install Honkit
-        run: npm install honkit --save-dev
+      - name: Install HonKit
+        run: npm install honkit
 
-      - name: Run Honkit
-        run: |
-          echo "=== Running Honkit build ==="
-          npx honkit build ./zh-build ./public --log=debug
-          echo "=== Build output ==="
-          ls -la public/
+      - name: Build
+        run: npx honkit build ./zh-build ./public
 
-      - name: Push to GitHub Pages (Chinese)
+      - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: gh-pages-zh
           build_dir: public
-          fqdn: python-zh.swaroopch.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
