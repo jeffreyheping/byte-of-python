@@ -1,4 +1,4 @@
-# 附录：历史课 {% raw %}{#history-lesson}{% endraw %}
+# 附录：历史课 {#history-lesson}
 
 我第一次接触 Python 是在我需要为我编写的一个名为 'Diamond' 的软件编写安装程序时，以便使安装变得简单。我不得不在 Python 和 Perl 的 Qt 库绑定之间做出选择。我在网上做了一些研究，发现了[著名且受人尊敬的黑客 Eric S. Raymond 的一篇文章](http://www.python.org/about/success/esr/)，他在文章中谈到 Python 如何成为他最喜欢的编程语言。我还发现 PyQt 绑定比 Perl-Qt 更成熟。所以，我决定 Python 就是适合我的语言。
 
@@ -14,7 +14,7 @@
 
 本书需要读者的帮助，比如你们自己，来指出书中任何不好的、不可理解的或错误的部分。请[写信给主要作者]({{ book.contactUrl }})或各自的[译者](./translations.md#translations)，提出你的评论和建议。
 
-# 附录：修订历史 {% raw %}{#revision-history}{% endraw %}
+# 附录：修订历史 {#revision-history}
 
 - 无版本变更
     - 2020 年 11 月 6 日

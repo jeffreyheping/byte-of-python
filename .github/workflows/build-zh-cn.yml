@@ -7,11 +7,9 @@ on:
 
 jobs:
   build-zh-cn:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -27,15 +25,20 @@ jobs:
           cp zh-cn/book.json zh-build/
           cp -r programs zh-build/
           cp -r img zh-build/
-          ls zh-build/
+          echo "=== zh-build contents ==="
+          ls -la zh-build/
+          echo "=== SUMMARY.md ==="
+          cat zh-build/SUMMARY.md
 
       - name: Install Honkit
         run: npm install honkit --save-dev
 
       - name: Run Honkit
         run: |
+          echo "=== Running Honkit build ==="
           npx honkit build ./zh-build ./public
-          ls public/
+          echo "=== Build output ==="
+          ls -la public/
 
       - name: Push to GitHub Pages
         if: success()

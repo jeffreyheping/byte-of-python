@@ -1,4 +1,4 @@
-# 安装 {% raw %}{#installation}{% endraw %}
+# 安装 {#installation}
 
 当我们在本书中提到"Python 3"时，指的是任何等于或大于 [Python {{ book.pythonVersion }}](https://www.python.org/downloads/) 的版本。
 
@@ -20,7 +20,7 @@
 
 注意：对于已经了解编程的人，如果你熟悉 Docker，可以查看 [Python in Docker](https://hub.docker.com/_/python/) 和 [Docker on Windows](https://docs.docker.com/windows/)。
 
-### DOS 提示符 {% raw %}{#dos-prompt}{% endraw %}
+### DOS 提示符 {#dos-prompt}
 
 如果你希望能够从 Windows 命令行（即 DOS 提示符）使用 Python，那么你需要正确设置 PATH 环境变量。
 

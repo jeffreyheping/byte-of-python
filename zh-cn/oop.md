@@ -1,4 +1,4 @@
-# 面向对象编程 {% raw %}{#oop}{% endraw %}
+# 面向对象编程 {#oop}
 
 在我们迄今为止编写的所有程序中，我们都是围绕函数来设计程序的，即操作数据的语句块。这被称为_面向过程_的编程方式。还有另一种组织程序的方式，即将数据和功能组合在一起，包裹在一种叫做对象的东西中。这就是_面向对象_的编程范式。大多数时候你可以使用面向过程编程，但在编写大型程序或遇到更适合这种方法的问题时，你可以使用面向对象编程技术。
 
@@ -18,7 +18,7 @@
 
 类使用 `class` 关键字创建。类的字段和方法列在一个缩进的代码块中。
 
-## `self` {% raw %}{#self}{% endraw %}
+## `self` {#self}
 
 类方法与普通函数只有一个特定的区别——它们必须有一个额外的第一个参数名称，需要添加到参数列表的开头，但你在调用方法时**不需要**为这个参数提供值，Python 会自动提供它。这个特定的变量引用对象_本身_，按照惯例，它被命名为 `self`。
 
@@ -32,15 +32,15 @@
 
 这也意味着如果你有一个不需要参数的方法，你仍然需要有一个参数——`self`。
 
-## 类 {% raw %}{#classes}{% endraw %}
+## 类 {#classes}
 
 最简单的类如以下示例所示（保存为 `oop_simplestclass.py`）。
 
-<pre><code class="lang-python">{% include "../programs/oop_simplestclass.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_simplestclass.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/oop_simplestclass.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_simplestclass.txt" %}</code></pre>
 
 **工作原理**
 
@@ -54,17 +54,17 @@
 
 我们已经讨论过类/对象可以有方法，就像函数一样，只是多了一个额外的 `self` 变量。我们现在来看一个例子（保存为 `oop_method.py`）。
 
-<pre><code class="lang-python">{% include "../programs/oop_method.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_method.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/oop_method.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_method.txt" %}</code></pre>
 
 **工作原理**
 
 在这里我们看到了 `self` 的实际使用。注意 `say_hi` 方法不接受任何参数，但在函数定义中仍然有 `self`。
 
-## `__init__` 方法 {% raw %}{#init}{% endraw %}
+## `__init__` 方法 {#init}
 
 在 Python 类中，有许多方法名具有特殊含义。我们现在来看看 `__init__` 方法的含义。
 
@@ -72,11 +72,11 @@
 
 示例（保存为 `oop_init.py`）：
 
-<pre><code class="lang-python">{% include "../programs/oop_init.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_init.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/oop_init.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_init.txt" %}</code></pre>
 
 **工作原理**
 
@@ -89,7 +89,7 @@
 
 现在，我们可以在方法中使用 `self.name` 字段了，这在 `say_hi` 方法中得到了演示。
 
-## 类变量与对象变量 {% raw %}{#class-obj-vars}{% endraw %}
+## 类变量与对象变量 {#class-obj-vars}
 
 我们已经讨论了类和对象的功能部分（即方法），现在让我们学习数据部分。数据部分，即字段，不过是_绑定_到类和对象的**命名空间**（namespace）的普通变量。这意味着这些名称仅在这些类和对象的上下文中有效。这就是为什么它们被称为_命名空间_。
 
@@ -99,11 +99,11 @@
 
 **对象变量**由类的每个单独的对象/实例拥有。在这种情况下，每个对象都有自己的字段副本，即它们不共享，并且与不同实例中同名字段没有任何关系。一个例子会让你很容易理解（保存为 `oop_objvar.py`）：
 
-<pre><code class="lang-python">{% include "../programs/oop_objvar.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_objvar.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/oop_objvar.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_objvar.txt" %}</code></pre>
 
 **工作原理**
 
@@ -157,11 +157,11 @@ how_many = classmethod(how_many)
 
 我们现在将这个例子作为一个程序来看（保存为 `oop_subclass.py`）：
 
-<pre><code class="lang-python">{% include "../programs/oop_subclass.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_subclass.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/oop_subclass.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_subclass.txt" %}</code></pre>
 
 **工作原理**
 

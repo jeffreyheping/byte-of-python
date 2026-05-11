@@ -6,7 +6,7 @@
 
 本书将教你使用 Python 3。书中也会提供一些指导，帮助你适应更老但更普及的 Python 2。
 
-## 谁在读 A Byte of Python？ {% raw %}{#who-reads-bop}{% endraw %}
+## 谁在读 A Byte of Python？ {#who-reads-bop}
 
 以下是读者对本书的评价：
 

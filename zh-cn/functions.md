@@ -8,11 +8,11 @@
 
 示例（保存为 `function1.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function1.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function1.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function1.txt" %}</code></pre>
+<pre><code>{% include "./programs/function1.txt" %}</code></pre>
 
 **工作原理**
 
@@ -28,11 +28,11 @@
 
 示例（保存为 `function_param.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function_param.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function_param.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function_param.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_param.txt" %}</code></pre>
 
 **工作原理**
 
@@ -46,11 +46,11 @@
 
 示例（保存为 `function_local.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function_local.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function_local.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function_local.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_local.txt" %}</code></pre>
 
 **工作原理**
 
@@ -60,7 +60,7 @@
 
 通过最后的 `print` 语句，我们显示主块中定义的 `x` 的值，从而确认它实际上不受之前调用的函数中局部赋值的影响。
 
-## `global` 语句 {% raw %}{#global-statement}{% endraw %}
+## `global` 语句 {#global-statement}
 
 如果你想给一个在程序顶层定义的名称（即不在函数或类等任何作用域内）赋值，那么你必须告诉 Python 这个名称不是局部的，而是*全局*的（global）。我们使用 `global` 语句来实现这一点。如果没有 `global` 语句，就不可能给函数外部定义的变量赋值。
 
@@ -68,11 +68,11 @@
 
 示例（保存为 `function_global.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function_global.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function_global.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function_global.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_global.txt" %}</code></pre>
 
 **工作原理**
 
@@ -80,7 +80,7 @@
 
 你可以使用同一个 `global` 语句指定多个全局变量，例如 `global x, y, z`。
 
-## 默认参数值 {% raw %}{#default-arguments}{% endraw %}
+## 默认参数值 {#default-arguments}
 
 对于某些函数，你可能想让一些参数变成*可选的*，并在用户不想为它们提供值时使用默认值。这可以通过默认参数值来实现。你可以在函数定义中，在参数名后面加上赋值运算符（`=`）和默认值来指定默认参数值。
 
@@ -88,11 +88,11 @@
 
 示例（保存为 `function_default.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function_default.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function_default.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function_default.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_default.txt" %}</code></pre>
 
 **工作原理**
 
@@ -114,11 +114,11 @@
 
 示例（保存为 `function_keyword.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function_keyword.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function_keyword.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function_keyword.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_keyword.txt" %}</code></pre>
 
 **工作原理**
 
@@ -134,11 +134,11 @@
 
 有时你可能想定义一个可以接受_任意_数量参数的函数，即可**变**数量的**参数**（varargs），这可以通过使用星号来实现（保存为 `function_varargs.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function_varargs.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function_varargs.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function_varargs.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_varargs.txt" %}</code></pre>
 
 **工作原理**
 
@@ -148,17 +148,17 @@
 
 我们将在[后面的章节](./data_structures.md#data-structures)中探索 tuple 和 dict。
 
-## `return` 语句 {% raw %}{#return-statement}{% endraw %}
+## `return` 语句 {#return-statement}
 
 `return` 语句用于从函数中*返回*，即跳出函数。我们还可以选择性地从函数中*返回一个值*。
 
 示例（保存为 `function_return.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function_return.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function_return.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function_return.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_return.txt" %}</code></pre>
 
 **工作原理**
 
@@ -183,11 +183,11 @@ Python 有一个很棒的功能叫做*文档字符串*（documentation string）
 
 示例（保存为 `function_docstring.py`）：
 
-<pre><code class="lang-python">{% include "../programs/function_docstring.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/function_docstring.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/function_docstring.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_docstring.txt" %}</code></pre>
 
 **工作原理**
 

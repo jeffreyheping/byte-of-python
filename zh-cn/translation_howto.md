@@ -1,4 +1,4 @@
-# 翻译指南 {% raw %}{#translation-howto}{% endraw %}
+# 翻译指南 {#translation-howto}
 
 1. 本书的完整源代码可以从 {{ book.sourceUrl }} 获取。
 2. 请先 [fork 本仓库](https://help.github.com/articles/fork-a-repo)。

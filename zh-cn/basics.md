@@ -65,7 +65,7 @@ print('hello world')
 
 双引号中的字符串与单引号中的字符串工作方式完全相同。例如 `"What's your name?"`。
 
-### 三引号 {% raw %}{#triple-quotes}{% endraw %}
+### 三引号 {#triple-quotes}
 
 你可以使用三引号——（`"""` 或 `'''`）来指定多行字符串。你可以在三引号内自由使用单引号和双引号。例如：
 

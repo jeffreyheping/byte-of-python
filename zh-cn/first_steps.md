@@ -58,7 +58,7 @@ Hello World
 
 如果你对这个话题的详细讨论感兴趣，请查看 [Finding the Perfect Python Code Editor](https://realpython.com/courses/finding-perfect-python-code-editor/)。
 
-## PyCharm {% raw %}{#pycharm}{% endraw %}
+## PyCharm {#pycharm}
 
 [PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) 是一个免费的编辑器，你可以用它来编写 Python 程序。
 

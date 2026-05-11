@@ -75,11 +75,11 @@ Yes
 
 示例（保存为 `more_lambda.py`）：
 
-<pre><code class="lang-python">{% include "../programs/more_lambda.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/more_lambda.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/more_lambda.txt" %}</code></pre>
+<pre><code>{% include "./programs/more_lambda.txt" %}</code></pre>
 
 **工作原理**
 
@@ -91,11 +91,11 @@ Yes
 
 示例（保存为 `more_list_comprehension.py`）：
 
-<pre><code class="lang-python">{% include "../programs/more_list_comprehension.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/more_list_comprehension.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/more_list_comprehension.txt" %}</code></pre>
+<pre><code>{% include "./programs/more_list_comprehension.txt" %}</code></pre>
 
 **工作原理**
 
@@ -123,7 +123,7 @@ Yes
 
 因为我们在 `args` 变量上有 `*` 前缀，所以传递给函数的所有额外参数都作为 tuple 存储在 `args` 中。如果使用 `**` 前缀，则额外的参数将被视为 dict 的键/值对。
 
-## assert 语句 {% raw %}{#assert}{% endraw %}
+## assert 语句 {#assert}
 
 `assert` 语句用于断言某件事为真。例如，如果你非常确定你正在使用的 list 中至少有一个元素，并想检查这一点，如果它不为真则引发错误，那么 `assert` 语句在这种情况下非常合适。当 assert 语句失败时，会引发一个 `AssertionError`。
 `pop()` 方法从 list 中移除并返回最后一个元素。
@@ -141,15 +141,15 @@ AssertionError
 
 `assert` 语句应该谨慎使用。大多数情况下，最好捕获异常，要么处理问题，要么向用户显示错误消息然后退出。
 
-## 装饰器 {% raw %}{#decorator}{% endraw %}
+## 装饰器 {#decorator}
 
 装饰器（decorator）是应用包装函数的快捷方式。这对于用相同的代码反复"包裹"功能非常有帮助。例如，我为自己创建了一个 `retry` 装饰器，可以将其应用于任何函数，如果在运行期间抛出任何异常，它会重试，最多重试 5 次，每次重试之间有延迟。这对于尝试向远程计算机进行网络调用的情况特别有用：
 
-<pre><code class="lang-python">{% include "../programs/more_decorator.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/more_decorator.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/more_decorator.txt" %}</code></pre>
+<pre><code>{% include "./programs/more_decorator.txt" %}</code></pre>
 
 **工作原理**
 
@@ -159,7 +159,7 @@ AssertionError
 - http://www.ibm.com/developerworks/linux/library/l-cpdecor.html
 - http://toumorokoshi.github.io/dry-principles-through-python-decorators.html
 
-## Python 2 和 Python 3 之间的差异 {% raw %}{#two-vs-three}{% endraw %}
+## Python 2 和 Python 3 之间的差异 {#two-vs-three}
 
 参见：
 

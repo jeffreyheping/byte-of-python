@@ -38,11 +38,11 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 示例（保存为 `exceptions_handle.py`）：
 
-<pre><code class="lang-python">{% include "../programs/exceptions_handle.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/exceptions_handle.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/exceptions_handle.txt" %}</code></pre>
+<pre><code>{% include "./programs/exceptions_handle.txt" %}</code></pre>
 
 **工作原理**
 
@@ -64,11 +64,11 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 示例（保存为 `exceptions_raise.py`）：
 
-<pre><code class="lang-python">{% include "../programs/exceptions_raise.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/exceptions_raise.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/exceptions_raise.txt" %}</code></pre>
+<pre><code>{% include "./programs/exceptions_raise.txt" %}</code></pre>
 
 **工作原理**
 
@@ -76,17 +76,17 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 在 `except` 子句中，我们提到错误的类将被存储 `as` 变量名来保存相应的错误/异常对象。这类似于函数调用中的参数和实参。在这个特定的 `except` 子句中，我们使用异常对象的 `length` 和 `atleast` 字段向用户打印适当的消息。
 
-## Try ... Finally {% raw %}{#try-finally}{% endraw %}
+## Try ... Finally {#try-finally}
 
 假设你在程序中读取一个文件。你如何确保无论是否引发异常，文件对象都被正确关闭？这可以使用 `finally` 块来完成。
 
 将此程序保存为 `exceptions_finally.py`：
 
-<pre><code class="lang-python">{% include "../programs/exceptions_finally.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/exceptions_finally.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/exceptions_finally.txt" %}</code></pre>
+<pre><code>{% include "./programs/exceptions_finally.txt" %}</code></pre>
 
 **工作原理**
 
@@ -98,13 +98,13 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 还要注意我们在 `print` 之后使用了 `sys.stdout.flush()`，以便它立即打印到屏幕上。
 
-## with 语句 {% raw %}{#with}{% endraw %}
+## with 语句 {#with}
 
 在 `try` 块中获取资源，然后在 `finally` 块中释放资源是一种常见的模式。因此，还有一个 `with` 语句，可以以简洁的方式实现这一点：
 
 保存为 `exceptions_using_with.py`：
 
-<pre><code class="lang-python">{% include "../programs/exceptions_using_with.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/exceptions_using_with.py" %}</code></pre>
 
 **工作原理**
 

@@ -10,11 +10,11 @@
 
 示例（保存为 `module_using_sys.py`）：
 
-<pre><code class="lang-python">{% include "../programs/module_using_sys.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/module_using_sys.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/module_using_sys.txt" %}</code></pre>
+<pre><code>{% include "./programs/module_using_sys.txt" %}</code></pre>
 
 **工作原理**
 
@@ -38,13 +38,13 @@
 
 请注意，当前目录是启动程序的目录。运行 `import os; print(os.getcwd())` 来查找你程序的当前目录。
 
-## 字节编译的 .pyc 文件 {% raw %}{#pyc}{% endraw %}
+## 字节编译的 .pyc 文件 {#pyc}
 
 导入模块是一个相对昂贵的操作，所以 Python 做了一些优化来加快速度。一种方法是创建扩展名为 `.pyc` 的*字节编译*（byte-compiled）文件，这是 Python 将程序转换成的中间形式（还记得[介绍部分](./about_python.md#interpreted)关于 Python 工作原理的说明吗？）。当你下次从另一个程序导入该模块时，这个 `.pyc` 文件就很有用——它会快得多，因为导入模块所需的部分处理工作已经完成了。此外，这些字节编译文件是平台无关的。
 
 注意：这些 `.pyc` 文件通常创建在与相应 `.py` 文件相同的目录中。如果 Python 没有权限写入该目录中的文件，那么 `.pyc` 文件将_不会_被创建。
 
-## `from..import` 语句 {% raw %}{#from-import-statement}{% endraw %}
+## `from..import` 语句 {#from-import-statement}
 
 如果你想直接将 `argv` 变量导入到你的程序中（以避免每次都输入 `sys.`），那么你可以使用 `from sys import argv` 语句。
 
@@ -57,17 +57,17 @@ from math import sqrt
 print("Square root of 16 is", sqrt(16))
 ```
 
-## 模块的 `__name__` {% raw %}{#module-name}{% endraw %}
+## 模块的 `__name__` {#module-name}
 
 每个模块都有一个名称，模块中的语句可以找出其模块的名称。这对于判断模块是作为独立程序运行还是被导入特别有用。如前所述，当模块第一次被导入时，它包含的代码会被执行。我们可以利用这一点，根据模块是被自身使用还是从另一个模块导入来让模块表现出不同的行为。这可以通过使用模块的 `__name__` 属性来实现。
 
 示例（保存为 `module_using_name.py`）：
 
-<pre><code class="lang-python">{% include "../programs/module_using_name.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/module_using_name.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/module_using_name.txt" %}</code></pre>
+<pre><code>{% include "./programs/module_using_name.txt" %}</code></pre>
 
 **工作原理**
 
@@ -79,7 +79,7 @@ print("Square root of 16 is", sqrt(16))
 
 示例（保存为 `mymodule.py`）：
 
-<pre><code class="lang-python">{% include "../programs/mymodule.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/mymodule.py" %}</code></pre>
 
 上面是一个示例*模块*。如你所见，与我们通常的 Python 程序相比，它没有什么特别之处。接下来我们将看到如何在其他 Python 程序中使用这个模块。
 
@@ -87,11 +87,11 @@ print("Square root of 16 is", sqrt(16))
 
 另一个模块（保存为 `mymodule_demo.py`）：
 
-<pre><code class="lang-python">{% include "../programs/mymodule_demo.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/mymodule_demo.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/mymodule_demo.txt" %}</code></pre>
+<pre><code>{% include "./programs/mymodule_demo.txt" %}</code></pre>
 
 **工作原理**
 
@@ -99,7 +99,7 @@ print("Square root of 16 is", sqrt(16))
 
 下面是一个使用 `from..import` 语法的版本（保存为 `mymodule_demo2.py`）：
 
-<pre><code class="lang-python">{% include "../programs/mymodule_demo2.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/mymodule_demo2.py" %}</code></pre>
 
 `mymodule_demo2.py` 的输出与 `mymodule_demo.py` 的输出相同。
 
@@ -121,7 +121,7 @@ from mymodule import *
 >
 > Python 的指导原则之一是"显式优于隐式"（Explicit is better than Implicit）。在 Python 中运行 `import this` 来了解更多。
 
-## `dir` 函数 {% raw %}{#dir-function}{% endraw %}
+## `dir` 函数 {#dir-function}
 
 内置的 `dir()` 函数返回由对象定义的名称列表。
 如果对象是一个模块，该列表包括在该模块中定义的函数、类和变量。

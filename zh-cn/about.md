@@ -1,4 +1,4 @@
-# 附录：关于 {% raw %}{#colophon}{% endraw %}
+# 附录：关于 {#colophon}
 
 我在创建本书时使用的几乎所有软件都是 [FLOSS](./floss.md#floss)。
 

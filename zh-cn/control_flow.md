@@ -1,4 +1,4 @@
-# 控制流 {% raw %}{#control-flow}{% endraw %}
+# 控制流 {#control-flow}
 
 在我们目前看到的程序中，语句总是按照从上到下的精确顺序被 Python 忠实地执行。如果你想改变程序的执行流程呢？例如，你希望程序根据不同的情况做出不同的决策，比如根据一天中的不同时间打印"早上好"或"晚上好"？
 
@@ -11,11 +11,11 @@
 示例（保存为 `if.py`）：
 
 <!-- Tags expansion does not happen inside code blocks https://github.com/GitbookIO/gitbook/issues/707 -->
-<pre><code class="lang-python">{% include "../programs/if.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/if.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/if.txt" %}</code></pre>
+<pre><code>{% include "./programs/if.txt" %}</code></pre>
 
 **工作原理**
 
@@ -54,11 +54,11 @@ if True:
 
 示例（保存为 `while.py`）：
 
-<pre><code class="lang-python">{% include "../programs/while.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/while.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/while.txt" %}</code></pre>
+<pre><code>{% include "./programs/while.txt" %}</code></pre>
 
 **工作原理**
 
@@ -80,11 +80,11 @@ if True:
 
 示例（保存为 `for.py`）：
 
-<pre><code class="lang-python">{% include "../programs/for.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/for.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/for.txt" %}</code></pre>
+<pre><code>{% include "./programs/for.txt" %}</code></pre>
 
 **工作原理**
 
@@ -106,7 +106,7 @@ if True:
 >
 > 在 C/C++ 中，如果你想写 `for (int i = 0; i < 5; i++)`，那么在 Python 中你只需写 `for i in range(0,5)`。如你所见，Python 中的 `for` 循环更简单、更具表达力，也不容易出错。
 
-## `break` 语句 {% raw %}{#break-statement}{% endraw %}
+## `break` 语句 {#break-statement}
 
 `break` 语句用来*跳出*循环语句，即停止循环语句的执行，即使循环条件还没有变为 `False` 或者序列中的项目还没有被完全遍历。
 
@@ -114,11 +114,11 @@ if True:
 
 示例（保存为 `break.py`）：
 
-<pre><code class="lang-python">{% include "../programs/break.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/break.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/break.txt" %}</code></pre>
+<pre><code>{% include "./programs/break.txt" %}</code></pre>
 
 **工作原理**
 
@@ -139,17 +139,17 @@ if you wanna make your work also fun:
     use Python!
 ```
 
-## `continue` 语句 {% raw %}{#continue-statement}{% endraw %}
+## `continue` 语句 {#continue-statement}
 
 `continue` 语句用来告诉 Python 跳过当前循环块中剩余的语句，*继续*到循环的下一次迭代。
 
 示例（保存为 `continue.py`）：
 
-<pre><code class="lang-python">{% include "../programs/continue.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/continue.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "../programs/continue.txt" %}</code></pre>
+<pre><code>{% include "./programs/continue.txt" %}</code></pre>
 
 **工作原理**
 
