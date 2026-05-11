@@ -27,6 +27,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install HonKit and plugins
+        run: npm install honkit honkit-plugin-include-code
+
       - name: Prepare build directory
         run: |
           mkdir -p zh-build
@@ -34,9 +37,6 @@ jobs:
           cp zh-cn/book.json zh-build/
           cp -r programs zh-build/
           cp -r img zh-build/
-
-      - name: Install HonKit
-        run: npm install honkit
 
       - name: Build
         run: npx honkit build ./zh-build ./public
