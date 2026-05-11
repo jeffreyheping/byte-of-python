@@ -1,0 +1,50 @@
+name: Build Chinese Translation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-zh-cn:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Prepare Chinese build directory
+        run: |
+          mkdir -p zh-build
+          cp zh-cn/*.md zh-build/
+          cp zh-cn/book.json zh-build/
+          cp -r programs zh-build/
+          cp -r img zh-build/
+          echo "=== zh-build contents ==="
+          ls -la zh-build/
+          echo "=== SUMMARY.md ==="
+          cat zh-build/SUMMARY.md
+
+      - name: Install Honkit
+        run: npm install honkit --save-dev
+
+      - name: Run Honkit
+        run: |
+          echo "=== Running Honkit build ==="
+          npx honkit build ./zh-build ./public
+          echo "=== Build output ==="
+          ls -la public/
+
+      - name: Push to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: gh-pages
+          build_dir: public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
