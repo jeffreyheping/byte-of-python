@@ -78,24 +78,6 @@ byte-of-python/
 
 ---
 
-## 🤝 参与翻译
-
-欢迎参与本书的翻译和完善！
-
-1. 📋 查看 [待翻译章节](zh-cn/SUMMARY.md)
-2. 🍴 Fork 本仓库
-3. 🌿 创建分支：`git checkout -b translation/章节名`
-4. ✏️ 开始翻译
-5. 📝 提交 Pull Request
-
-### 翻译规范
-
-- 术语统一参考 [Python 官方文档中文版](https://docs.python.org/zh-cn/3/)
-- 代码示例保持英文原样
-- 保留原文链接和参考文献
-- 使用与原书相同的 CC BY-SA 4.0 许可证
-
----
 
 ## 📜 许可证
 
