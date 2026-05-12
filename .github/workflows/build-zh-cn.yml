@@ -29,10 +29,10 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Calibre
+      - name: Install Calibre + CJK Fonts
         run: |
           sudo apt update
-          sudo apt install calibre
+          sudo apt install -y calibre fonts-noto-cjk
 
       - name: Prepare build directory
         run: |
@@ -57,7 +57,7 @@ jobs:
           cd zh-build
           npx honkit epub . ../python-jianming-jiaocheng.epub
 
-      - name: Build PDF (Puppeteer)
+      - name: Build PDF (Puppeteer + CJK Font)
         run: |
           cd public
           npm init -y > /dev/null 2>&1
