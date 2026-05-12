@@ -27,6 +27,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Calibre
+        run: |
+          sudo apt update
+          sudo apt install calibre
+
       - name: Prepare build directory
         run: |
           mkdir -p zh-build
@@ -34,27 +39,48 @@ jobs:
           cp zh-cn/book.json zh-build/
           cp -r programs zh-build/
           cp -r img zh-build/
-          echo "=== 目录结构 ===" && ls -la zh-build/
-          echo "=== programs目录 ===" && ls -la zh-build/programs/ | head -10
 
       - name: Install HonKit
         run: |
           cd zh-build
-          npm install honkit --save-dev 2>&1 | tail -20
-          echo "=== npm安装完成 ===" && ls -la node_modules/.bin/ | grep honkit
+          npm install honkit --save-dev
 
-      - name: Build
+      - name: Build HTML
         run: |
           cd zh-build
-          npx honkit build . ../public --log=debug 2>&1
-          echo "=== 构建完成 ===" 
-          ls -la ../public/ 2>&1 | head -20
+          npx honkit build . ../public
+
+      - name: Build PDF
+        run: |
+          cd zh-build
+          npx honkit pdf . ../python-jianming-jiaocheng.pdf
+
+      - name: Build EPUB
+        run: |
+          cd zh-build
+          npx honkit epub . ../python-jianming-jiaocheng.epub
 
       - name: Deploy to GitHub Pages
-        if: success() && always()
+        if: success()
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: gh-pages-zh
           build_dir: public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload PDF
+        if: success()
+        uses: softprops/action-gh-release@v1
+        with:
+          files: python-jianming-jiaocheng.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload EPUB
+        if: success()
+        uses: softprops/action-gh-release@v1
+        with:
+          files: python-jianming-jiaocheng.epub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
