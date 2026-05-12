@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -69,18 +71,23 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload PDF
-        if: success()
-        uses: softprops/action-gh-release@v1
-        with:
-          files: python-jianming-jiaocheng.pdf
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate tag name
+        id: tag
+        run: echo "TAG_NAME=v1.0.zh-cn.$(date +%Y%m%d)" >> $GITHUB_OUTPUT
 
-      - name: Upload EPUB
+      - name: Create Release
         if: success()
         uses: softprops/action-gh-release@v1
         with:
-          files: python-jianming-jiaocheng.epub
+          tag_name: ${{ steps.tag.outputs.TAG_NAME }}
+          name: Python简明教程 ${{ steps.tag.outputs.TAG_NAME }}
+          body: |
+            《A Byte of Python》简体中文翻译版
+            
+            - PDF: python-jianming-jiaocheng.pdf
+            - EPUB: python-jianming-jiaocheng.epub
+          files: |
+            python-jianming-jiaocheng.pdf
+            python-jianming-jiaocheng.epub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
