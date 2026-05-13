@@ -1,4 +1,4 @@
-﻿# 数据结构 {#data-structures}
+# 数据结构 {#data-structures}
 
 数据结构（data structure）基本上就是——它们是可以将一些*数据*组织在一起的*结构*。换句话说，它们用于存储一组相关的数据。
 
