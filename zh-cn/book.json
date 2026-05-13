@@ -2,7 +2,7 @@
     "title": "Python 简明教程",
     "description": "《A Byte of Python》简体中文翻译版 - 适合编程初学者的 Python 入门教程",
     "author": "Swaroop C H",
-    "language": "zh-cn",
+    "language": "zh-hans",
     "variables": {
         "authorUrl": "https://swaroopch.com/about/",
         "buyBookUrl": "https://swaroopch.com/buybook/",
