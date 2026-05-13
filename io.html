@@ -1,0 +1,746 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>输入与输出 · Python 简明教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.7">
+        <meta name="author" content="Swaroop C H">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exceptions.html" />
+    
+    
+    <link rel="prev" href="oop.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    献辞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    关于 Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    第一步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    运算符与表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    解决问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    输入与输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    更多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    接下来做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    附录：FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    附录：关于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    附录：修订历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    附录：翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    附录：翻译指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >输入与输出</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="io">输入与输出 </h1>
+<p>在某些情况下，你的程序需要与用户交互。例如，你可能想从用户那里获取输入，然后打印一些结果。我们可以分别使用 <code>input()</code> 函数和 <code>print</code> 函数来实现这一点。</p>
+<p>对于输出，我们还可以使用 <code>str</code>（string，字符串）类的各种方法。例如，你可以使用 <code>rjust</code> 方法来获取一个右对齐到指定宽度的字符串。更多详情请参见 <code>help(str)</code>。</p>
+<p>另一种常见的输入/输出类型是处理文件。创建、读取和写入文件的能力对于许多程序来说是必不可少的，我们将在本章中探索这一方面。</p>
+<h2 id="从用户获取输入">从用户获取输入</h2>
+<p>将此程序保存为 <code>io_input.py</code>：</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">reverse</span>(<span class="hljs-params">text</span>):
+    <span class="hljs-keyword">return</span> text[::-<span class="hljs-number">1</span>]
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">is_palindrome</span>(<span class="hljs-params">text</span>):
+    <span class="hljs-keyword">return</span> text == reverse(text)
+
+
+something = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter text: "</span>)
+<span class="hljs-keyword">if</span> is_palindrome(something):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Yes, it is a palindrome"</span>)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"No, it is not a palindrome"</span>)
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python3 io_input.py
+Enter text: sir
+No, it is not a palindrome
+
+$ python3 io_input.py
+Enter text: madam
+Yes, it is a palindrome
+
+$ python3 io_input.py
+Enter text: racecar
+Yes, it is a palindrome
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>我们使用切片功能来反转文本。我们已经见过如何使用 <code>seq[a:b]</code> 代码从位置 <code>a</code> 到位置 <code>b</code> 对序列进行<a href="data_structures.html#sequence">切片</a>。我们还可以提供第三个参数来确定切片的<em>步长</em>。默认步长是 <code>1</code>，因此它返回文本的连续部分。给定一个负步长，即 <code>-1</code>，将返回反转后的文本。</p>
+<p><code>input()</code> 函数接受一个字符串作为参数并将其显示给用户。然后它等待用户输入内容并按回车键。一旦用户输入并按下回车键，<code>input()</code> 函数就会返回用户输入的文本。</p>
+<p>我们获取该文本并将其反转。如果原始文本和反转后的文本相等，那么该文本就是一个<a href="http://en.wiktionary.org/wiki/palindrome" target="_blank">回文</a>（palindrome）。</p>
+<h3 id="课后练习">课后练习</h3>
+<p>检查文本是否为回文时还应该忽略标点符号、空格和大小写。例如，"Rise to vote, sir." 也是一个回文，但我们当前的程序不会这么说。你能改进上面的程序来识别这个回文吗？</p>
+<p>如果你需要提示，思路是……<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
+<h2 id="文件">文件</h2>
+<p>你可以通过创建 <code>file</code> 类的对象并适当地使用其 <code>read</code>、<code>readline</code> 或 <code>write</code> 方法来打开和使用文件进行读取或写入。读取或写入文件的能力取决于你为文件打开指定的模式。最后，当你完成文件操作后，调用 <code>close</code> 方法告诉 Python 我们已经完成了对文件的使用。</p>
+<p>示例（保存为 <code>io_using_file.py</code>）：</p>
+<pre><code class="lang-python">poem = <span class="hljs-string">'''\
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+    use Python!
+'''</span>
+
+<span class="hljs-comment"># Open for 'w'riting</span>
+f = <span class="hljs-built_in">open</span>(<span class="hljs-string">'poem.txt'</span>, <span class="hljs-string">'w'</span>)
+<span class="hljs-comment"># Write text to file</span>
+f.write(poem)
+<span class="hljs-comment"># Close the file</span>
+f.close()
+
+<span class="hljs-comment"># If no mode is specified,</span>
+<span class="hljs-comment"># 'r'ead mode is assumed by default</span>
+f = <span class="hljs-built_in">open</span>(<span class="hljs-string">'poem.txt'</span>)
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    line = f.readline()
+    <span class="hljs-comment"># Zero length indicates EOF</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(line) == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-comment"># The `line` already has a newline</span>
+    <span class="hljs-comment"># at the end of each line</span>
+    <span class="hljs-comment"># since it is reading from a file.</span>
+    <span class="hljs-built_in">print</span>(line, end=<span class="hljs-string">''</span>)
+<span class="hljs-comment"># close the file</span>
+f.close()
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python3 io_using_file.py
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+    use Python!
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>注意我们可以简单地使用 <code>open</code> 方法创建一个新的文件对象。我们使用内置的 <code>open</code> 函数打开文件（如果文件不存在则创建它），并指定文件名和我们想要打开文件的模式。模式可以是读模式（<code>'r'</code>）、写模式（<code>'w'</code>）或追加模式（<code>'a'</code>）。我们还可以指定是以文本模式（<code>'t'</code>）还是二进制模式（<code>'b'</code>）进行读取、写入或追加。实际上还有更多可用的模式，<code>help(open)</code> 会给你更多关于它们的详细信息。默认情况下，<code>open()</code> 将文件视为文本文件并以读模式打开。</p>
+<p>在我们的例子中，我们首先以写文本模式打开/创建文件，并使用文件对象的 <code>write</code> 方法将我们的字符串变量 <code>poem</code> 写入文件，然后我们最终 <code>close</code> 文件。</p>
+<p>接下来，我们再次打开同一个文件进行读取。我们不需要指定模式，因为'读文本文件'是默认模式。我们使用 <code>readline</code> 方法在循环中逐行读取文件。这个方法返回一个完整的行，包括行末的换行符。当返回<em>空</em>字符串时，意味着我们已经到达文件末尾，我们 <code>break</code> 跳出循环。</p>
+<p>最后，我们最终 <code>close</code> 文件。</p>
+<p>从我们的 <code>readline</code> 输出中可以看到，这个程序确实已经写入并读取了我们的新 <code>poem.txt</code> 文件。</p>
+<h2 id="pickle">Pickle</h2>
+<p>Python 提供了一个名为 <code>pickle</code> 的标准模块，你可以用它将<em>任何</em>纯 Python 对象存储在文件中，然后稍后取回它。这被称为<em>持久化</em>（persistently）存储对象。</p>
+<p>示例（保存为 <code>io_pickle.py</code>）：</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pickle
+
+<span class="hljs-comment"># The name of the file where we will store the object</span>
+shoplistfile = <span class="hljs-string">'shoplist.data'</span>
+<span class="hljs-comment"># The list of things to buy</span>
+shoplist = [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'mango'</span>, <span class="hljs-string">'carrot'</span>]
+
+<span class="hljs-comment"># Write to the file</span>
+f = <span class="hljs-built_in">open</span>(shoplistfile, <span class="hljs-string">'wb'</span>)
+<span class="hljs-comment"># Dump the object to a file</span>
+pickle.dump(shoplist, f)
+f.close()
+
+<span class="hljs-comment"># Destroy the shoplist variable</span>
+<span class="hljs-keyword">del</span> shoplist
+
+<span class="hljs-comment"># Read back from the storage</span>
+f = <span class="hljs-built_in">open</span>(shoplistfile, <span class="hljs-string">'rb'</span>)
+<span class="hljs-comment"># Load the object from the file</span>
+storedlist = pickle.load(f)
+<span class="hljs-built_in">print</span>(storedlist)
+f.close()
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python io_pickle.py
+['apple', 'mango', 'carrot']
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>要将对象存储在文件中，我们首先必须以写二进制模式（<strong>w</strong>rite <strong>b</strong>inary）<code>open</code> 文件，然后调用 <code>pickle</code> 模块的 <code>dump</code> 函数。这个过程被称为<em>序列化</em>（pickling）。</p>
+<p>接下来，我们使用 <code>pickle</code> 模块的 <code>load</code> 函数检索对象，该函数返回该对象。这个过程被称为<em>反序列化</em>（unpickling）。</p>
+<h2 id="unicode">Unicode</h2>
+<p>到目前为止，当我们编写和使用字符串，或读写文件时，我们只使用了简单的英文字符。英文和非英文字符都可以用 Unicode 表示（详情请参阅本节末尾的文章），Python 3 默认以 Unicode 存储字符串变量（想想我们用单引号、双引号或三引号写的所有文本）。</p>
+<blockquote>
+<p>注意：如果你使用的是 Python 2，并且希望能够读写其他非英语语言，我们需要使用 <code>unicode</code> 类型，它以字符 <code>u</code> 开头，例如 <code>u"hello world"</code></p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">"hello world"</span>
+<span class="hljs-string">'hello world'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">type</span>(<span class="hljs-string">"hello world"</span>)
+&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">'str'</span>&gt;
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">u"hello world"</span>
+<span class="hljs-string">'hello world'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">type</span>(<span class="hljs-string">u"hello world"</span>)
+&lt;<span class="hljs-keyword">class</span> <span class="hljs-string">'str'</span>&gt;
+</code></pre>
+<p>当数据通过互联网发送时，我们需要以字节形式发送……这是你的计算机容易理解的形式。将 Unicode（Python 存储字符串时使用的格式）转换为字节的规则称为编码（encoding）。一种流行的编码是 UTF-8。我们可以通过在 <code>open</code> 函数中使用一个简单的关键字参数来进行 UTF-8 的读写。</p>
+<pre><code class="lang-python"><span class="hljs-comment"># encoding=utf-8</span>
+<span class="hljs-keyword">import</span> io
+
+f = io.<span class="hljs-built_in">open</span>(<span class="hljs-string">"abc.txt"</span>, <span class="hljs-string">"wt"</span>, encoding=<span class="hljs-string">"utf-8"</span>)
+f.write(<span class="hljs-string">u"Imagine non-English language here"</span>)
+f.close()
+
+text = io.<span class="hljs-built_in">open</span>(<span class="hljs-string">"abc.txt"</span>, encoding=<span class="hljs-string">"utf-8"</span>).read()
+<span class="hljs-built_in">print</span>(text)
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>我们使用 <code>io.open</code>，然后在第一个 open 语句中使用 <code>encoding</code> 参数来编码消息，在第二个 open 语句中再次使用 <code>encoding</code> 参数来解码消息。注意，我们应该只在文本模式下的 open 语句中使用编码。</p>
+<p>每当我们编写使用 Unicode 字面量（在字符串前加 <code>u</code>）的程序时，就像我们上面使用的那样，我们必须确保告诉 Python 本身我们的程序使用 UTF-8，我们必须在程序顶部放置 <code># encoding=utf-8</code> 注释。</p>
+<p>你应该通过阅读以下资料来了解更多关于这个主题的内容：</p>
+<ul>
+<li><a href="http://www.joelonsoftware.com/articles/Unicode.html" target="_blank">"每个软件开发者绝对、肯定必须了解的 Unicode 和字符集的最基本知识"</a></li>
+<li><a href="http://docs.python.org/3/howto/unicode.html" target="_blank">Python Unicode Howto</a></li>
+<li><a href="http://nedbatchelder.com/text/unipain.html" target="_blank">Nat Batchelder 的实用 Unicode 演讲</a></li>
+</ul>
+<h2 id="小结">小结</h2>
+<p>我们讨论了各种类型的输入/输出、文件处理、pickle 模块和 Unicode。</p>
+<p>接下来，我们将探索异常的概念。</p>
+<hr></hr>
+<blockquote id="fn_1">
+<sup>1</sup>. 使用一个 tuple（你可以在这里找到<em>所有</em><a href="http://grammar.ccc.commnet.edu/grammar/marks/marks.htm" target="_blank">标点符号的列表</a>）来保存所有禁止的字符，然后使用成员测试来确定一个字符是否应该被删除，即 forbidden = (<code>!</code>, <code>?</code>, <code>.</code>, ...)。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="oop.html" class="navigation navigation-prev " aria-label="Previous page: 面向对象编程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exceptions.html" class="navigation navigation-next " aria-label="Next page: 异常">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"输入与输出","level":"1.15","depth":1,"next":{"title":"异常","level":"1.16","depth":1,"path":"exceptions.md","ref":"exceptions.md","articles":[]},"previous":{"title":"面向对象编程","level":"1.14","depth":1,"path":"oop.md","ref":"oop.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Swaroop C H","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"buyBookUrl":"https://swaroopch.com/buybook/","officialUrl":"https://python.swaroopch.com","authorUrl":"https://swaroopch.com/about/","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","vimBookUrl":"https://vim.swaroopch.com/","contactUrl":"https://swaroopch.com/contact/","sourceUrl":"https://github.com/swaroopch/byte-of-python","translatorUrl":"https://github.com/jeffreyheping","translator":"jeffreyheping","pythonVersion":"3.6.0"},"title":"Python 简明教程","language":"zh-hans","gitbook":"*","description":"《A Byte of Python》简体中文翻译版 - 适合编程初学者的 Python 入门教程"},"file":{"path":"io.md","mtime":"2026-05-13T09:11:36.338Z","type":"markdown"},"gitbook":{"version":"6.1.7","time":"2026-05-13T09:11:43.492Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

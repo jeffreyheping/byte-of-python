@@ -1,0 +1,906 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>数据结构 · Python 简明教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.7">
+        <meta name="author" content="Swaroop C H">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="problem_solving.html" />
+    
+    
+    <link rel="prev" href="modules.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="dedication.html">
+            
+                <a href="dedication.html">
+            
+                    
+                    献辞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about_python.html">
+            
+                <a href="about_python.html">
+            
+                    
+                    关于 Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="first_steps.html">
+            
+                <a href="first_steps.html">
+            
+                    
+                    第一步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="op_exp.html">
+            
+                <a href="op_exp.html">
+            
+                    
+                    运算符与表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    控制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="data_structures.html">
+            
+                <a href="data_structures.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="problem_solving.html">
+            
+                <a href="problem_solving.html">
+            
+                    
+                    解决问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    输入与输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="exceptions.html">
+            
+                <a href="exceptions.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="stdlib.html">
+            
+                <a href="stdlib.html">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="more.html">
+            
+                <a href="more.html">
+            
+                    
+                    更多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="what_next.html">
+            
+                <a href="what_next.html">
+            
+                    
+                    接下来做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="floss.html">
+            
+                <a href="floss.html">
+            
+                    
+                    附录：FLOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    附录：关于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="revision_history.html">
+            
+                <a href="revision_history.html">
+            
+                    
+                    附录：修订历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="translations.html">
+            
+                <a href="translations.html">
+            
+                    
+                    附录：翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="translation_howto.html">
+            
+                <a href="translation_howto.html">
+            
+                    
+                    附录：翻译指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="feedback.html">
+            
+                <a href="feedback.html">
+            
+                    
+                    反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >数据结构</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="data-structures">数据结构 </h1>
+<p>数据结构（data structure）基本上就是——它们是可以将一些<em>数据</em>组织在一起的<em>结构</em>。换句话说，它们用于存储一组相关的数据。</p>
+<p>Python 中有四种内置的数据结构——<em>list（列表）、tuple（元组）、dict（字典）和 set（集合）</em>。我们将了解如何使用它们中的每一个，以及它们如何让我们的生活更轻松。</p>
+<h2 id="列表（list）">列表（List）</h2>
+<p><code>list</code> 是一种保存有序项目集合的数据结构，即你可以在列表中存储一个项目的<em>序列</em>。如果你能想到一个购物清单，上面列出了你要购买的物品，这就很容易想象了，只不过你的购物清单上每个物品可能占一行，而在 Python 中你用逗号将它们分隔开。</p>
+<p>项目列表应该用方括号括起来，以便 Python 理解你在指定一个列表。一旦创建了列表，你就可以添加、删除或搜索列表中的项目。由于我们可以添加和删除项目，我们说列表是一种<em>可变的</em>（mutable）数据类型，即这种类型可以被修改。</p>
+<h2 id="对象与类的快速入门">对象与类的快速入门</h2>
+<p>虽然我一直在推迟讨论对象和类，但现在需要做一些简单的解释，以便你能更好地理解列表。我们将在<a href="oop.html#oop">后面的章节</a>中详细探讨这个主题。</p>
+<p>列表是使用对象和类的一个例子。当我们使用变量 <code>i</code> 并给它赋值，比如整数 <code>5</code> 时，你可以把它想象为创建了一个 <em>int</em> 类（即类型）的<em>对象</em>（即实例）<code>i</code>。实际上，你可以阅读 <code>help(int)</code> 来更好地理解这一点。</p>
+<p>类还可以有<em>方法</em>（method），即为该类专门定义的函数。你只有拥有该类的对象时才能使用这些功能。例如，Python 为 <code>list</code> 类提供了一个 <code>append</code> 方法，它允许你在列表末尾添加一个项目。例如，<code>mylist.append('an item')</code> 会将该字符串添加到列表 <code>mylist</code> 中。请注意使用点号表示法来访问对象的方法。</p>
+<p>类还可以有<em>字段</em>（field），它们不过是为该类专门定义的变量。你只有拥有该类的对象时才能使用这些变量/名称。字段也通过点号表示法来访问，例如 <code>mylist.field</code>。</p>
+<p>示例（保存为 <code>ds_using_list.py</code>）：</p>
+<pre><code class="lang-python"><span class="hljs-comment"># This is my shopping list</span>
+shoplist = [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'mango'</span>, <span class="hljs-string">'carrot'</span>, <span class="hljs-string">'banana'</span>]
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'I have'</span>, <span class="hljs-built_in">len</span>(shoplist), <span class="hljs-string">'items to purchase.'</span>)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'These items are:'</span>, end=<span class="hljs-string">' '</span>)
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shoplist:
+    <span class="hljs-built_in">print</span>(item, end=<span class="hljs-string">' '</span>)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'\nI also have to buy rice.'</span>)
+shoplist.append(<span class="hljs-string">'rice'</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'My shopping list is now'</span>, shoplist)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'I will sort my list now'</span>)
+shoplist.sort()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Sorted shopping list is'</span>, shoplist)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'The first item I will buy is'</span>, shoplist[<span class="hljs-number">0</span>])
+olditem = shoplist[<span class="hljs-number">0</span>]
+<span class="hljs-keyword">del</span> shoplist[<span class="hljs-number">0</span>]
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'I bought the'</span>, olditem)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'My shopping list is now'</span>, shoplist)
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python ds_using_list.py
+I have 4 items to purchase.
+These items are: apple mango carrot banana
+I also have to buy rice.
+My shopping list is now ['apple', 'mango', 'carrot', 'banana', 'rice']
+I will sort my list now
+Sorted shopping list is ['apple', 'banana', 'carrot', 'mango', 'rice']
+The first item I will buy is apple
+I bought the apple
+My shopping list is now ['banana', 'carrot', 'mango', 'rice']
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>变量 <code>shoplist</code> 是一个要去市场的人的购物清单。在 <code>shoplist</code> 中，我们只存储了要购买的物品名称的字符串，但你可以向列表中添加<em>任何类型的对象</em>，包括数字甚至其他列表。</p>
+<p>我们还使用了 <code>for..in</code> 循环来遍历列表中的项目。到现在为止，你一定已经意识到列表也是一种序列。序列的特殊性将在<a href="#sequence">后面的章节</a>中讨论。</p>
+<p>请注意在调用 <code>print</code> 函数时使用了 <code>end</code> 参数，表示我们希望以空格而不是通常的换行符来结束输出。</p>
+<p>接下来，我们使用列表对象的 <code>append</code> 方法向列表中添加一个项目，正如之前已经讨论过的。然后，我们通过将列表直接传递给 <code>print</code> 函数来打印列表的内容，确认项目确实已添加到列表中，<code>print</code> 函数会整洁地打印出来。</p>
+<p>然后，我们使用列表的 <code>sort</code> 方法对列表进行排序。重要的是要理解这个方法会影响列表本身，而不是返回一个修改后的列表——这与字符串的工作方式不同。这就是我们说列表是<em>可变的</em>（mutable）而字符串是<em>不可变的</em>（immutable）的含义。</p>
+<p>接下来，当我们在市场买完一个物品后，我们想把它从列表中删除。我们使用 <code>del</code> 语句来实现这一点。在这里，我们指定要删除列表中的哪个项目，<code>del</code> 语句就会帮我们从列表中删除它。我们指定要删除列表中的第一个项目，因此使用 <code>del shoplist[0]</code>（请记住 Python 从 0 开始计数）。</p>
+<p>如果你想了解列表对象定义的所有方法，请查看 <code>help(list)</code> 获取详情。</p>
+<h2 id="元组（tuple）">元组（Tuple）</h2>
+<p>元组（tuple）用于将多个对象组合在一起。你可以把它们想象成类似于列表，但没有列表类提供的丰富功能。元组的一个主要特点是它们像字符串一样是<em>不可变的</em>（immutable），即你不能修改元组。</p>
+<p>元组通过在可选的一对圆括号中指定用逗号分隔的项目来定义。</p>
+<p>元组通常用于语句或用户自定义函数可以安全地假定值的集合（即使用的值元组）不会改变的情况。</p>
+<p>示例（保存为 <code>ds_using_tuple.py</code>）：</p>
+<pre><code class="lang-python"><span class="hljs-comment"># I would recommend always using parentheses</span>
+<span class="hljs-comment"># to indicate start and end of tuple</span>
+<span class="hljs-comment"># even though parentheses are optional.</span>
+<span class="hljs-comment"># Explicit is better than implicit.</span>
+zoo = (<span class="hljs-string">'python'</span>, <span class="hljs-string">'elephant'</span>, <span class="hljs-string">'penguin'</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Number of animals in the zoo is'</span>, <span class="hljs-built_in">len</span>(zoo))
+
+new_zoo = <span class="hljs-string">'monkey'</span>, <span class="hljs-string">'camel'</span>, zoo    <span class="hljs-comment"># parentheses not required but are a good idea</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Number of cages in the new zoo is'</span>, <span class="hljs-built_in">len</span>(new_zoo))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'All animals in new zoo are'</span>, new_zoo)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Animals brought from old zoo are'</span>, new_zoo[<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Last animal brought from old zoo is'</span>, new_zoo[<span class="hljs-number">2</span>][<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Number of animals in the new zoo is'</span>,
+      <span class="hljs-built_in">len</span>(new_zoo)-<span class="hljs-number">1</span>+<span class="hljs-built_in">len</span>(new_zoo[<span class="hljs-number">2</span>]))
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python ds_using_tuple.py
+Number of animals in the zoo is 3
+Number of cages in the new zoo is 3
+All animals in new zoo are ('monkey', 'camel', ('python', 'elephant', 'penguin'))
+Animals brought from old zoo are ('python', 'elephant', 'penguin')
+Last animal brought from old zoo is penguin
+Number of animals in the new zoo is 5
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>变量 <code>zoo</code> 引用一个项目的元组。我们看到 <code>len</code> 函数可以用来获取元组的长度。这也表明元组也是一种<a href="#sequence">序列</a>。</p>
+<p>我们现在将这些动物转移到一个新的动物园，因为旧的动物园要关闭了。因此，<code>new_zoo</code> 元组包含了一些已经在那里的动物以及从旧动物园带来的动物。回到现实，请注意元组中的元组不会丢失其身份。</p>
+<p>我们可以通过在方括号中指定项目的位置来访问元组中的项目，就像我们对列表所做的那样。这被称为<em>索引</em>（indexing）运算符。我们通过指定 <code>new_zoo[2]</code> 来访问 <code>new_zoo</code> 中的第三个项目，通过指定 <code>new_zoo[2][2]</code> 来访问 <code>new_zoo</code> 元组中第三个项目内的第三个项目。一旦你理解了这个用法，这就非常简单了。</p>
+<blockquote>
+<p><strong>包含 0 或 1 个项目的元组</strong></p>
+<p>空元组通过一对空圆括号构造，例如 <code>myempty = ()</code>。但是，只有一个项目的元组就没那么简单了。你必须在第一个（也是唯一的）项目后面加一个逗号，以便 Python 能够区分元组和表达式中包围对象的一对圆括号，即你必须指定 <code>singleton = (2 , )</code> 如果你想要一个包含项目 <code>2</code> 的元组。</p>
+</blockquote>
+<!-- -->
+<blockquote>
+<p><strong>给 Perl 程序员的提示</strong></p>
+<p>列表中的列表不会丢失其身份，即列表不会像 Perl 中那样被展平。这同样适用于元组中的元组、列表中的元组、元组中的列表等。就 Python 而言，它们只是存储在另一个对象中的对象，仅此而已。</p>
+</blockquote>
+<h2 id="字典（dictionary）">字典（Dictionary）</h2>
+<p>字典就像一个地址簿，你可以通过知道一个人的姓名来找到他/她的地址或联系方式，即我们将<em>键</em>（key）（姓名）与<em>值</em>（value）（详细信息）关联起来。请注意，键必须是唯一的，就像你不能在有两个完全同名的人的情况下找到正确的信息一样。</p>
+<p>请注意，字典的键只能使用不可变对象（如字符串），但字典的值可以使用不可变或可变对象。这基本上意味着你应该只使用简单的对象作为键。</p>
+<p>键值对通过 <code>d = {key1 : value1, key2 : value2 }</code> 的表示法在字典中指定。请注意，键值对之间用冒号分隔，对与对之间用逗号分隔，所有这些都包含在一对花括号中。</p>
+<p>请记住，字典中的键值对没有任何顺序。如果你想要特定的顺序，那么你必须在用之前自己对它们进行排序。</p>
+<p>你将使用的字典是 <code>dict</code> 类的实例/对象。</p>
+<p>示例（保存为 <code>ds_using_dict.py</code>）：</p>
+<pre><code class="lang-python"><span class="hljs-comment"># 'ab' is short for 'a'ddress'b'ook</span>
+
+ab = {
+    <span class="hljs-string">'Swaroop'</span>: <span class="hljs-string">'swaroop@swaroopch.com'</span>,
+    <span class="hljs-string">'Larry'</span>: <span class="hljs-string">'larry@wall.org'</span>,
+    <span class="hljs-string">'Matsumoto'</span>: <span class="hljs-string">'matz@ruby-lang.org'</span>,
+    <span class="hljs-string">'Spammer'</span>: <span class="hljs-string">'spammer@hotmail.com'</span>
+}
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Swaroop's address is"</span>, ab[<span class="hljs-string">'Swaroop'</span>])
+
+<span class="hljs-comment"># Deleting a key-value pair</span>
+<span class="hljs-keyword">del</span> ab[<span class="hljs-string">'Spammer'</span>]
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'\nThere are {} contacts in the address-book\n'</span>.<span class="hljs-built_in">format</span>(<span class="hljs-built_in">len</span>(ab)))
+
+<span class="hljs-keyword">for</span> name, address <span class="hljs-keyword">in</span> ab.items():
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Contact {} at {}'</span>.<span class="hljs-built_in">format</span>(name, address))
+
+<span class="hljs-comment"># Adding a key-value pair</span>
+ab[<span class="hljs-string">'Guido'</span>] = <span class="hljs-string">'guido@python.org'</span>
+
+<span class="hljs-keyword">if</span> <span class="hljs-string">'Guido'</span> <span class="hljs-keyword">in</span> ab:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"\nGuido's address is"</span>, ab[<span class="hljs-string">'Guido'</span>])
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python ds_using_dict.py
+Swaroop's address is swaroop@swaroopch.com
+
+There are 3 contacts in the address-book
+
+Contact Swaroop at swaroop@swaroopch.com
+Contact Matsumoto at matz@ruby-lang.org
+Contact Larry at larry@wall.org
+
+Guido's address is guido@python.org
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>我们使用已经讨论过的表示法创建了字典 <code>ab</code>。然后我们通过使用索引运算符指定键来访问键值对，如我们在列表和元组的上下文中讨论的那样。请注意这个简单的语法。</p>
+<p>我们可以使用我们的老朋友——<code>del</code> 语句来删除键值对。我们只需指定字典和要删除的键的索引运算符，并将其传递给 <code>del</code> 语句。此操作不需要知道键对应的值。</p>
+<p>接下来，我们使用字典的 <code>items</code> 方法来访问字典的每个键值对，该方法返回一个 tuple 列表，其中每个 tuple 包含一对项目——键后跟值。我们使用 <code>for..in</code> 循环获取每一对，并将其分别赋给变量 <code>name</code> 和 <code>address</code>，然后在 for 块中打印这些值。</p>
+<p>我们可以简单地通过使用索引运算符访问一个键并赋值来添加新的键值对，就像我们在上面为 Guido 所做的那样。</p>
+<p>我们可以使用 <code>in</code> 运算符来检查键值对是否存在。</p>
+<p>关于 <code>dict</code> 类的方法列表，请查看 <code>help(dict)</code>。</p>
+<blockquote>
+<p><strong>关键字参数与字典</strong></p>
+<p>如果你在函数中使用了关键字参数，那么你已经使用了字典！想一想——键值对是你在函数定义的参数列表中指定的，当你在函数内部访问变量时，它只是对字典的键访问（这在编译器设计术语中称为<em>符号表</em>）。</p>
+</blockquote>
+<h2 id="序列（sequence）">序列（Sequence）</h2>
+<p>列表、元组和字符串都是序列的例子，但什么是序列，序列有什么特别之处呢？</p>
+<p>主要特性是<em>成员测试</em>（即 <code>in</code> 和 <code>not in</code> 表达式）和<em>索引操作</em>（indexing），后者允许我们直接获取序列中的特定项目。</p>
+<p>上面提到的三种序列——列表、元组和字符串，还有一种<em>切片</em>（slicing）操作，它允许我们检索序列的一个切片，即序列的一部分。</p>
+<p>示例（保存为 <code>ds_seq.py</code>）：</p>
+<pre><code class="lang-python">shoplist = [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'mango'</span>, <span class="hljs-string">'carrot'</span>, <span class="hljs-string">'banana'</span>]
+name = <span class="hljs-string">'swaroop'</span>
+
+<span class="hljs-comment"># Indexing or 'Subscription' operation #</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item 0 is'</span>, shoplist[<span class="hljs-number">0</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item 1 is'</span>, shoplist[<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item 2 is'</span>, shoplist[<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item 3 is'</span>, shoplist[<span class="hljs-number">3</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item -1 is'</span>, shoplist[-<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item -2 is'</span>, shoplist[-<span class="hljs-number">2</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Character 0 is'</span>, name[<span class="hljs-number">0</span>])
+
+<span class="hljs-comment"># Slicing on a list #</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item 1 to 3 is'</span>, shoplist[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item 2 to end is'</span>, shoplist[<span class="hljs-number">2</span>:])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item 1 to -1 is'</span>, shoplist[<span class="hljs-number">1</span>:-<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Item start to end is'</span>, shoplist[:])
+
+<span class="hljs-comment"># Slicing on a string #</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'characters 1 to 3 is'</span>, name[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'characters 2 to end is'</span>, name[<span class="hljs-number">2</span>:])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'characters 1 to -1 is'</span>, name[<span class="hljs-number">1</span>:-<span class="hljs-number">1</span>])
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'characters start to end is'</span>, name[:])
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python ds_seq.py
+Item 0 is apple
+Item 1 is mango
+Item 2 is carrot
+Item 3 is banana
+Item -1 is banana
+Item -2 is carrot
+Character 0 is s
+Item 1 to 3 is ['mango', 'carrot']
+Item 2 to end is ['carrot', 'banana']
+Item 1 to -1 is ['mango', 'carrot']
+Item start to end is ['apple', 'mango', 'carrot', 'banana']
+characters 1 to 3 is wa
+characters 2 to end is aroop
+characters 1 to -1 is waroo
+characters start to end is swaroop
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>首先，我们看到如何使用索引来获取序列的各个项目。这也被称为<em>下标操作</em>（subscription operation）。每当你在方括号中指定一个数字给序列时，如上所示，Python 会为你获取序列中对应位置的项目。请记住 Python 从 0 开始计数。因此，<code>shoplist[0]</code> 获取第一个项目，<code>shoplist[3]</code> 获取 <code>shoplist</code> 序列中的第四个项目。</p>
+<p>索引也可以是负数，在这种情况下，位置从序列的末尾开始计算。因此，<code>shoplist[-1]</code> 引用序列中的最后一个项目，<code>shoplist[-2]</code> 获取序列中的倒数第二个项目。</p>
+<p>切片操作通过指定序列名称，后面跟方括号中用冒号分隔的一对可选数字来使用。请注意，这与你一直使用的索引操作非常相似。请记住数字是可选的，但冒号不是。</p>
+<p>切片操作中冒号前的第一个数字表示切片开始的位置，冒号后的第二个数字表示切片停止的位置。如果未指定第一个数字，Python 将从序列的开头开始。如果省略第二个数字，Python 将在序列的末尾停止。请注意，返回的切片从起始位置<em>开始</em>，在结束位置<em>之前</em>结束，即起始位置包含在内，但结束位置不包含在序列切片中。</p>
+<p>因此，<code>shoplist[1:3]</code> 返回从位置 1 开始的序列切片，包含位置 2 但在位置 3 停止，因此返回了两个项目的<em>切片</em>。类似地，<code>shoplist[:]</code> 返回整个序列的副本。</p>
+<p>你也可以使用负数位置进行切片。负数用于从序列末尾开始的位置。例如，<code>shoplist[:-1]</code> 将返回一个序列切片，其中排除了序列的最后一个项目，但包含其他所有内容。</p>
+<p>你还可以为切片提供第三个参数，即切片的<em>步长</em>（step）（默认情况下，步长大小为 1）：</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>shoplist = [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'mango'</span>, <span class="hljs-string">'carrot'</span>, <span class="hljs-string">'banana'</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>shoplist[::<span class="hljs-number">1</span>]
+[<span class="hljs-string">'apple'</span>, <span class="hljs-string">'mango'</span>, <span class="hljs-string">'carrot'</span>, <span class="hljs-string">'banana'</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>shoplist[::<span class="hljs-number">2</span>]
+[<span class="hljs-string">'apple'</span>, <span class="hljs-string">'carrot'</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>shoplist[::<span class="hljs-number">3</span>]
+[<span class="hljs-string">'apple'</span>, <span class="hljs-string">'banana'</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>shoplist[::-<span class="hljs-number">1</span>]
+[<span class="hljs-string">'banana'</span>, <span class="hljs-string">'carrot'</span>, <span class="hljs-string">'mango'</span>, <span class="hljs-string">'apple'</span>]
+</code></pre>
+<p>请注意，当步长为 2 时，我们获取位置为 0、2 的项目。当步长为 3 时，我们获取位置为 0、3 的项目，等等。</p>
+<p>在交互式 Python 解释器中尝试各种切片组合，这样你可以立即看到结果。序列的妙处在于你可以用相同的方式访问元组、列表和字符串！</p>
+<h2 id="集合（set）">集合（Set）</h2>
+<p>集合是简单对象的<em>无序</em>集合。当对象在集合中的存在性比顺序或出现次数更重要时，就会使用集合。</p>
+<p>使用集合，你可以测试成员关系、判断是否是另一个集合的子集、求两个集合的交集等等。</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>bri = <span class="hljs-built_in">set</span>([<span class="hljs-string">'brazil'</span>, <span class="hljs-string">'russia'</span>, <span class="hljs-string">'india'</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">'india'</span> <span class="hljs-keyword">in</span> bri
+<span class="hljs-literal">True</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">'usa'</span> <span class="hljs-keyword">in</span> bri
+<span class="hljs-literal">False</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>bric = bri.copy()
+<span class="hljs-meta">&gt;&gt;&gt; </span>bric.add(<span class="hljs-string">'china'</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>bric.issuperset(bri)
+<span class="hljs-literal">True</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>bri.remove(<span class="hljs-string">'russia'</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>bri &amp; bric <span class="hljs-comment"># 或 bri.intersection(bric)</span>
+{<span class="hljs-string">'brazil'</span>, <span class="hljs-string">'india'</span>}
+</code></pre>
+<p><strong>工作原理</strong></p>
+<p>如果你还记得学校里学过的基本集合论数学，那么这个例子就不言自明。如果不记得，你可以在网上搜索"集合论"和"韦恩图"来更好地理解我们在 Python 中对集合的使用。</p>
+<h2 id="引用（references）">引用（References）</h2>
+<p>当你创建一个对象并将其赋值给一个变量时，该变量只是<em>引用</em>（refer）该对象，并不代表对象本身！也就是说，变量名指向计算机内存中存储该对象的位置。这被称为将名称<em>绑定</em>（binding）到对象。</p>
+<p>通常，你不需要担心这个问题，但由于引用而产生的微妙效果是你需要注意的：</p>
+<p>示例（保存为 <code>ds_reference.py</code>）：</p>
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">'Simple Assignment'</span>)
+shoplist = [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'mango'</span>, <span class="hljs-string">'carrot'</span>, <span class="hljs-string">'banana'</span>]
+<span class="hljs-comment"># mylist is just another name pointing to the same object!</span>
+mylist = shoplist
+
+<span class="hljs-comment"># I purchased the first item, so I remove it from the list</span>
+<span class="hljs-keyword">del</span> shoplist[<span class="hljs-number">0</span>]
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'shoplist is'</span>, shoplist)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'mylist is'</span>, mylist)
+<span class="hljs-comment"># Notice that both shoplist and mylist both print</span>
+<span class="hljs-comment"># the same list without the 'apple' confirming that</span>
+<span class="hljs-comment"># they point to the same object</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Copy by making a full slice'</span>)
+<span class="hljs-comment"># Make a copy by doing a full slice</span>
+mylist = shoplist[:]
+<span class="hljs-comment"># Remove first item</span>
+<span class="hljs-keyword">del</span> mylist[<span class="hljs-number">0</span>]
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'shoplist is'</span>, shoplist)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'mylist is'</span>, mylist)
+<span class="hljs-comment"># Notice that now the two lists are different</span>
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python ds_reference.py
+Simple Assignment
+shoplist is ['mango', 'carrot', 'banana']
+mylist is ['mango', 'carrot', 'banana']
+Copy by making a full slice
+shoplist is ['mango', 'carrot', 'banana']
+mylist is ['carrot', 'banana']
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>大部分解释都在注释中。</p>
+<p>请记住，如果你想复制一个列表或这类序列或复杂对象（而不是整数等简单的<em>对象</em>），你必须使用切片操作来创建副本。如果你只是将变量名赋给另一个名称，它们都将''引用''同一个对象，如果你不小心，这可能会带来麻烦。</p>
+<blockquote>
+<p><strong>给 Perl 程序员的提示</strong></p>
+<p>请记住，列表的赋值语句<strong>不会</strong>创建副本。你必须使用切片操作来创建序列的副本。</p>
+</blockquote>
+<h2 id="more-strings">更多关于字符串的内容 </h2>
+<p>我们之前已经详细讨论过字符串。还有什么可以了解的呢？嗯，你知道字符串也是对象，并且有方法可以执行从检查字符串的一部分到去除空格等各种操作吗？事实上，你已经在使用字符串方法了……就是 <code>format</code> 方法！</p>
+<p>你在程序中使用的字符串都是 <code>str</code> 类的对象。这个类的一些有用方法在下一个示例中展示。有关此类方法的完整列表，请查看 <code>help(str)</code>。</p>
+<p>示例（保存为 <code>ds_str_methods.py</code>）：</p>
+<pre><code class="lang-python"><span class="hljs-comment"># This is a string object</span>
+name = <span class="hljs-string">'Swaroop'</span>
+
+<span class="hljs-keyword">if</span> name.startswith(<span class="hljs-string">'Swa'</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Yes, the string starts with "Swa"'</span>)
+
+<span class="hljs-keyword">if</span> <span class="hljs-string">'a'</span> <span class="hljs-keyword">in</span> name:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Yes, it contains the string "a"'</span>)
+
+<span class="hljs-keyword">if</span> name.find(<span class="hljs-string">'war'</span>) != -<span class="hljs-number">1</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Yes, it contains the string "war"'</span>)
+
+delimiter = <span class="hljs-string">'_*_'</span>
+mylist = [<span class="hljs-string">'Brazil'</span>, <span class="hljs-string">'Russia'</span>, <span class="hljs-string">'India'</span>, <span class="hljs-string">'China'</span>]
+<span class="hljs-built_in">print</span>(delimiter.join(mylist))
+</code></pre>
+
+<p>输出：</p>
+<pre><code>$ python ds_str_methods.py
+Yes, the string starts with "Swa"
+Yes, it contains the string "a"
+Yes, it contains the string "war"
+Brazil_*_Russia_*_India_*_China
+</code></pre>
+
+<p><strong>工作原理</strong></p>
+<p>在这里，我们看到许多字符串方法的实际应用。<code>startswith</code> 方法用于查找字符串是否以给定的字符串开头。<code>in</code> 运算符用于检查给定的字符串是否是字符串的一部分。</p>
+<p><code>find</code> 方法用于定位给定子字符串在字符串中的位置；如果 <code>find</code> 未能找到子字符串，则返回 -1。<code>str</code> 类还有一个很方便的 <code>join</code> 方法，它用字符串作为序列中每个项目之间的分隔符来连接序列的项目，并返回由此生成的一个更大的字符串。</p>
+<h2 id="小结">小结</h2>
+<p>我们已经详细探索了 Python 的各种内置数据结构。这些数据结构对于编写合理规模的程序是必不可少的。</p>
+<p>现在我们已经掌握了 Python 的许多基础知识，接下来我们将学习如何设计和编写一个实际的 Python 程序。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="modules.html" class="navigation navigation-prev " aria-label="Previous page: 模块">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="problem_solving.html" class="navigation navigation-next " aria-label="Next page: 解决问题">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据结构","level":"1.12","depth":1,"next":{"title":"解决问题","level":"1.13","depth":1,"path":"problem_solving.md","ref":"problem_solving.md","articles":[]},"previous":{"title":"模块","level":"1.11","depth":1,"path":"modules.md","ref":"modules.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Swaroop C H","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"buyBookUrl":"https://swaroopch.com/buybook/","officialUrl":"https://python.swaroopch.com","authorUrl":"https://swaroopch.com/about/","downloadUrl":"https://github.com/swaroopch/byte-of-python/releases/latest","vimBookUrl":"https://vim.swaroopch.com/","contactUrl":"https://swaroopch.com/contact/","sourceUrl":"https://github.com/swaroopch/byte-of-python","translatorUrl":"https://github.com/jeffreyheping","translator":"jeffreyheping","pythonVersion":"3.6.0"},"title":"Python 简明教程","language":"zh-hans","gitbook":"*","description":"《A Byte of Python》简体中文翻译版 - 适合编程初学者的 Python 入门教程"},"file":{"path":"data_structures.md","mtime":"2026-05-13T09:11:36.337Z","type":"markdown"},"gitbook":{"version":"6.1.7","time":"2026-05-13T09:11:43.492Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
