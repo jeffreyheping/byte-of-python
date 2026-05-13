@@ -1,4 +1,4 @@
-﻿# Exceptions
+# Exceptions
 
 Exceptions occur when _exceptional_ situations occur in your program. For example, what if you are going to read a file and the file does not exist? Or what if you accidentally deleted it when the program was running? Such situations are handled using **exceptions**.
 

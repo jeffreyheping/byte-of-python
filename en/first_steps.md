@@ -1,4 +1,4 @@
-﻿# First Steps
+# First Steps
 
 We will now see how to run a traditional 'Hello World' program in Python. This will teach you how to write, save and run Python programs.
 

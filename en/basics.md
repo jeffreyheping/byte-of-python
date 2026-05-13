@@ -1,4 +1,4 @@
-﻿# Basics
+# Basics
 
 Just printing `hello world` is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables, and we'll learn some other concepts as well in this chapter.
 

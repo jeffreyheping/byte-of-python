@@ -1,4 +1,4 @@
-﻿# Operators and Expressions {#op-exp}
+# Operators and Expressions {#op-exp}
 
 Most statements (logical lines) that you write will contain _expressions_. A simple example of an expression is `2 + 3`. An expression can be broken down into operators and operands.
 

@@ -1,4 +1,4 @@
-﻿# Standard Library {#stdlib}
+# Standard Library {#stdlib}
 
 The Python Standard Library contains a huge number of useful modules and is part of every standard Python installation. It is important to become familiar with the Python Standard Library since many problems can be solved quickly if you are familiar with the range of things that these libraries can do.
 

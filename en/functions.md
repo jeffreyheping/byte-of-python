@@ -1,4 +1,4 @@
-﻿# Functions
+# Functions
 
 Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times. This is known as *calling* the function. We have already used many built-in functions such as `len` and `range`.
 

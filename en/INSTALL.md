@@ -1,4 +1,4 @@
-﻿```
+```
 # install node.js
 # see https://nodejs.dev/learn/how-to-install-nodejs
 
