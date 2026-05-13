@@ -10,11 +10,11 @@
 
 将此程序保存为 `io_input.py`：
 
-<pre><code class="lang-python">{% include "programs/io_input.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/io_input.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/io_input.txt" %}</code></pre>
+<pre><code>{% include "./programs/io_input.txt" %}</code></pre>
 
 **工作原理**
 
@@ -36,11 +36,11 @@
 
 示例（保存为 `io_using_file.py`）：
 
-<pre><code class="lang-python">{% include "programs/io_using_file.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/io_using_file.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/io_using_file.txt" %}</code></pre>
+<pre><code>{% include "./programs/io_using_file.txt" %}</code></pre>
 
 **工作原理**
 
@@ -60,11 +60,11 @@ Python 提供了一个名为 `pickle` 的标准模块，你可以用它将_任�
 
 示例（保存为 `io_pickle.py`）：
 
-<pre><code class="lang-python">{% include "programs/io_pickle.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/io_pickle.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/io_pickle.txt" %}</code></pre>
+<pre><code>{% include "./programs/io_pickle.txt" %}</code></pre>
 
 **工作原理**
 
@@ -91,7 +91,7 @@ Python 提供了一个名为 `pickle` 的标准模块，你可以用它将_任�
 
 当数据通过互联网发送时，我们需要以字节形式发送……这是你的计算机容易理解的形式。将 Unicode（Python 存储字符串时使用的格式）转换为字节的规则称为编码（encoding）。一种流行的编码是 UTF-8。我们可以通过在 `open` 函数中使用一个简单的关键字参数来进行 UTF-8 的读写。
 
-<pre><code class="lang-python">{% include "programs/io_unicode.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>
 
 **工作原理**
 

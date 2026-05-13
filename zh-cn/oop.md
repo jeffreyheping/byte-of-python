@@ -12,7 +12,7 @@
 >
 > C# 和 Java 1.5 程序员会发现这与_装箱和拆箱_（boxing and unboxing）概念类似。
 
-对象可以使用属于对象的普通变量来存储数据。属于对象或类的变量被称为**字段**（field）。对象也可以通过使用属于类的函数来拥有功能。这样的函数被称为类的**方法**（method）。这个术语很重要，因为它帮助我们区分独立的函数和变量与属于类或对象的函数和变量。 collectively，字段和方法可以被称为该类的**属性**（attribute）。
+对象可以使用属于对象的普通变量来存储数据。属于对象或类的变量被称为**字段**（field）。对象也可以通过使用属于类的函数来拥有功能。这样的函数被称为类的**方法**（method）。这个术语很重要，因为它帮助我们区分独立的函数和变量与属于类或对象的函数和变量。 总而言之，字段和方法可以被称为该类的**属性**（attribute）。
 
 字段有两种类型——它们可以属于类的每个实例/对象，也可以属于类本身。它们分别被称为**实例变量**和**类变量**。
 
@@ -36,11 +36,11 @@
 
 最简单的类如以下示例所示（保存为 `oop_simplestclass.py`）。
 
-<pre><code class="lang-python">{% include "programs/oop_simplestclass.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_simplestclass.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/oop_simplestclass.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_simplestclass.txt" %}</code></pre>
 
 **工作原理**
 
@@ -54,11 +54,11 @@
 
 我们已经讨论过类/对象可以有方法，就像函数一样，只是多了一个额外的 `self` 变量。我们现在来看一个例子（保存为 `oop_method.py`）。
 
-<pre><code class="lang-python">{% include "programs/oop_method.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_method.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/oop_method.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_method.txt" %}</code></pre>
 
 **工作原理**
 
@@ -72,11 +72,11 @@
 
 示例（保存为 `oop_init.py`）：
 
-<pre><code class="lang-python">{% include "programs/oop_init.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_init.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/oop_init.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_init.txt" %}</code></pre>
 
 **工作原理**
 
@@ -99,11 +99,11 @@
 
 **对象变量**由类的每个单独的对象/实例拥有。在这种情况下，每个对象都有自己的字段副本，即它们不共享，并且与不同实例中同名字段没有任何关系。一个例子会让你很容易理解（保存为 `oop_objvar.py`）：
 
-<pre><code class="lang-python">{% include "programs/oop_objvar.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_objvar.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/oop_objvar.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_objvar.txt" %}</code></pre>
 
 **工作原理**
 
@@ -157,21 +157,21 @@ how_many = classmethod(how_many)
 
 我们现在将这个例子作为一个程序来看（保存为 `oop_subclass.py`）：
 
-<pre><code class="lang-python">{% include "programs/oop_subclass.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/oop_subclass.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/oop_subclass.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_subclass.txt" %}</code></pre>
 
 **工作原理**
 
-要使用继承，我们在类定义中类名后面的 tuple 中指定基类名称（例如，`class Teacher(SchoolMember)`）。接下来，我们观察到基类的 `__init__` 方法是使用 `self` 变量显式调用的，以便我们可以在子类中初始化实例的基类部分。这非常重要要记住——由于我们在 `Teacher` 和 `Student` 子类中定义了 `__init__` 方法，Python 不会自动调用基类 `SchoolMember` 的构造函数，你必须自己显式调用它。
+要使用继承，我们在类定义中类名后面的元组中指定基类名称（例如，`class Teacher(SchoolMember)`）。接下来，我们观察到基类的 `__init__` 方法是使用 `self` 变量显式调用的，以便我们可以在子类中初始化实例的基类部分。这非常重要，要记住——由于我们在 `Teacher` 和 `Student` 子类中定义了 `__init__` 方法，Python 不会自动调用基类 `SchoolMember` 的构造函数，你必须自己显式调用它。
 
 相反，如果我们没有在子类中定义 `__init__` 方法，Python 会自动调用基类的构造函数。
 
-虽然我们可以像对待 `SchoolMember` 实例一样对待 `Teacher` 或 `Student` 的实例，并简单地通过输入 `Teacher.tell` 或 `Student.tell` 来访问 `SchoolMember` 的 `tell` 方法，但我们在每个子类中定义了另一个 `tell` 方法（使用 `SchoolMember` 的 `tell` 方法作为其中一部分）来为该子类量身定制。因为我们这样做了，当我们写 `Teacher.tell` 时，Python 使用该子类的 `tell` 方法而不是超类的。但是，如果子类中没有 `tell` 方法，Python 会使用超类中的 `tell` 方法。Python 总是先在实际的子类类型中查找方法，如果没有找到任何东西，就开始逐个在子类的基类中查找方法，按照类定义中 tuple 中指定的顺序（这里我们只有 1 个基类，但你可以有多个基类）。
+虽然我们可以像对待 `SchoolMember` 实例一样对待 `Teacher` 或 `Student` 的实例，并简单地通过输入 `Teacher.tell` 或 `Student.tell` 来访问 `SchoolMember` 的 `tell` 方法，但我们在每个子类中定义了另一个 `tell` 方法（使用 `SchoolMember` 的 `tell` 方法作为其中一部分）来为该子类量身定制。因为我们这样做了，当我们写 `Teacher.tell` 时，Python 使用该子类的 `tell` 方法而不是超类的。但是，如果子类中没有 `tell` 方法，Python 会使用超类中的 `tell` 方法。Python 总是先在实际的子类类型中查找方法，如果没有找到任何东西，就开始逐个在子类的基类中查找方法，按照类定义中元组中指定的顺序（这里我们只有 1 个基类，但你可以有多个基类）。
 
-关于术语的说明——如果在继承 tuple 中列出了多个类，那么它被称为**多重继承**（multiple inheritance）。
+关于术语的说明——如果在继承元组中列出了多个类，那么它被称为**多重继承**（multiple inheritance）。
 
 在超类的 `tell()` 方法中，`print` 函数使用了 `end` 参数来打印一行并允许下一个 print 继续在同一行上。这是一个让 `print` 不在打印末尾输出 `\n`（换行符）的技巧。
 

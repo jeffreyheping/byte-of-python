@@ -46,7 +46,7 @@ replace 命令可以简单也可以复杂，从简单的字符串替换到查找
 
 ## 问答
 
-- [Python 官方注意事项](http://docs.python.org/3/howto/doanddont.html)
+- [Python 官方最佳实践与禁忌](http://docs.python.org/3/howto/doanddont.html)
 - [Python 官方 FAQ](http://www.python.org/doc/faq/general/)
 - [Norvig 的不常见问题列表](http://norvig.com/python-iaq.html)
 - [Python 面试问答](http://dev.fyicenter.com/Interview-Questions/Python/index.html)
@@ -141,7 +141,7 @@ replace 命令可以简单也可以复杂，从简单的字符串替换到查找
 
 ## 小结
 
-我们现在已经到了本书的结尾，但正如他们所说，这是_结束的开始_！你现在是一个热切的 Python 用户，毫无疑问已经准备好用 Python 解决许多问题了。你可以开始自动化你的计算机来做各种以前不可想象的事情，或者编写你自己的游戏等等。所以，开始行动吧！
+我们现在已经到了本书的结尾，但正如他们所说，这是_结束的开始_！你现在是一个热爱 Python 的用户，毫无疑问已经准备好用 Python 解决许多问题了。你可以开始自动化你的计算机来做各种以前不可想象的事情，或者编写你自己的游戏等等。所以，开始行动吧！
 
 ---
 

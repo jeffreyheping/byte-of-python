@@ -8,7 +8,7 @@
 
 注意，如果你的 Windows 版本是 Vista 之前的版本，你应该[只下载 Python 3.4](https://www.python.org/downloads/windows/)，因为更新的版本需要更新版本的 Windows。
 
-注意：请确保勾选 `Add Python 3.5 to PATH` 选项。
+**小心**：请确保勾选 `Add Python 3.5 to PATH` 选项。
 
 要更改安装位置，点击 `Customize installation`，然后点击 `Next`，输入 `C:\python35`（或其他合适的位置）作为安装位置。
 
@@ -80,7 +80,7 @@ Python 3.6.0
 
 注意：`$` 是 shell 的提示符。根据你计算机操作系统的设置，你的提示符可能会有所不同，因此我只用 `$` 符号来表示提示符。
 
-注意：根据你计算机上安装的 Python 版本不同，输出可能会有所不同。
+**小心**：根据你计算机上安装的 Python 版本不同，输出可能会有所不同。
 
 ## 总结
 

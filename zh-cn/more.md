@@ -34,7 +34,7 @@
 
 有一些方法如 `__init__` 和 `__del__` 方法在类中具有特殊含义。
 
-特殊方法用于模仿内置类型的某些行为。例如，如果你想对你的类使用 `x[key]` 索引操作（就像你对 list 和 tuple 使用的那样），那么你只需要实现 `__getitem__()` 方法就可以了。如果你仔细想想，这就是 Python 为 `list` 类本身所做的事情！
+特殊方法用于模仿内置类型的某些行为。例如，如果你想对你的类使用 `x[key]` 索引操作（就像你对列表和元组使用的那样），那么你只需要实现 `__getitem__()` 方法就可以了。如果你仔细想想，这就是 Python 为 `list` 类本身所做的事情！
 
 一些有用的特殊方法列在下表中。如果你想了解所有的特殊方法，[请参阅手册](http://docs.python.org/3/reference/datamodel.html#special-method-names)。
 
@@ -75,33 +75,33 @@ Yes
 
 示例（保存为 `more_lambda.py`）：
 
-<pre><code class="lang-python">{% include "programs/more_lambda.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/more_lambda.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/more_lambda.txt" %}</code></pre>
+<pre><code>{% include "./programs/more_lambda.txt" %}</code></pre>
 
 **工作原理**
 
-注意 `list` 的 `sort` 方法可以接受一个 `key` 参数，该参数决定 list 如何排序（通常我们只知道升序或降序）。在我们的例子中，我们想要进行自定义排序，为此我们需要编写一个函数。与其为只在一个地方使用的函数编写一个单独的 `def` 块，我们使用 lambda 表达式来创建一个新函数。
+注意 `list` 的 `sort` 方法可以接受一个 `key` 参数，该参数决定列表如何排序（通常我们只知道升序或降序）。在我们的例子中，我们想要进行自定义排序，为此我们需要编写一个函数。与其为只在一个地方使用的函数编写一个单独的 `def` 块，我们使用 lambda 表达式来创建一个新函数。
 
 ## 列表推导式
 
-列表推导式（list comprehension）用于从现有 list 派生出一个新的 list。假设你有一个数字 list，你想得到一个对应的 list，其中只有大于 2 的数字被乘以 2。列表推导式非常适合这种情况。
+列表推导式（list comprehension）用于从现有列表派生出一个新的列表。假设你有一个数字列表，你想得到一个对应的列表，其中只有大于 2 的数字被乘以 2。列表推导式非常适合这种情况。
 
 示例（保存为 `more_list_comprehension.py`）：
 
-<pre><code class="lang-python">{% include "programs/more_list_comprehension.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/more_list_comprehension.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/more_list_comprehension.txt" %}</code></pre>
+<pre><code>{% include "./programs/more_list_comprehension.txt" %}</code></pre>
 
 **工作原理**
 
-在这里，我们通过指定在某些条件满足（`if i > 2`）时要执行的操作（`2*i`）来派生出一个新的 list。注意原始 list 保持不变。
+在这里，我们通过指定在某些条件满足（`if i > 2`）时要执行的操作（`2*i`）来派生出一个新的列表。注意原始列表保持不变。
 
-使用列表推导式的好处是它减少了使用循环处理 list 的每个元素并将其存储在新 list 中所需的样板代码量。
+使用列表推导式的好处是它减少了使用循环处理列表的每个元素并将其存储在新列表中所需的样板代码量。
 
 ## 在函数中接收 tuple 和 dict
 
@@ -125,8 +125,8 @@ Yes
 
 ## assert 语句 {#assert}
 
-`assert` 语句用于断言某件事为真。例如，如果你非常确定你正在使用的 list 中至少有一个元素，并想检查这一点，如果它不为真则引发错误，那么 `assert` 语句在这种情况下非常合适。当 assert 语句失败时，会引发一个 `AssertionError`。
-`pop()` 方法从 list 中移除并返回最后一个元素。
+`assert` 语句用于断言某件事为真。例如，如果你非常确定你正在使用的列表中至少有一个元素，并想检查这一点，如果它不为真则引发错误，那么 `assert` 语句在这种情况下非常合适。当 assert 语句失败时，会引发一个 `AssertionError`。
+`pop()` 方法从列表中移除并返回最后一个元素。
 
 ```python
 >>> mylist = ['item']
@@ -145,11 +145,11 @@ AssertionError
 
 装饰器（decorator）是应用包装函数的快捷方式。这对于用相同的代码反复"包裹"功能非常有帮助。例如，我为自己创建了一个 `retry` 装饰器，可以将其应用于任何函数，如果在运行期间抛出任何异常，它会重试，最多重试 5 次，每次重试之间有延迟。这对于尝试向远程计算机进行网络调用的情况特别有用：
 
-<pre><code class="lang-python">{% include "programs/more_decorator.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/more_decorator.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/more_decorator.txt" %}</code></pre>
+<pre><code>{% include "./programs/more_decorator.txt" %}</code></pre>
 
 **工作原理**
 

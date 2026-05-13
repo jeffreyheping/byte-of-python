@@ -12,7 +12,7 @@
 
 在对问题进行充分分析之后，我们_设计_程序。我们列出程序应该如何工作的要点。在这个例子中，我列出了_我_希望它如何工作的清单。如果你来做设计，可能不会得出相同的分析结果，因为每个人的做事方式不同，这完全没问题。
 
-- 需要备份的文件和目录在一个 list（列表）中指定。
+- 需要备份的文件和目录在一个列表中指定。
 - 备份必须存储在一个主备份目录中。
 - 文件被备份到一个 zip 文件中。
 - zip 压缩包的名称是当前的日期和时间。
@@ -28,11 +28,11 @@
 
 保存为 `backup_ver1.py`：
 
-<pre><code class="lang-python">{% include "programs/backup_ver1.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/backup_ver1.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/backup_ver1.txt" %}</code></pre>
+<pre><code>{% include "./programs/backup_ver1.txt" %}</code></pre>
 
 现在，我们进入了_测试_阶段，测试程序是否正常工作。如果程序行为不符合预期，我们就需要_调试_程序，即从程序中_去除 bug_（错误）。
 
@@ -42,7 +42,7 @@
 
 你会注意到我们是如何将_设计_一步一步地转化为_代码_的。
 
-我们首先导入 `os` 和 `time` 模块来使用它们。然后，我们在 `source` list 中指定需要备份的文件和目录。目标目录是我们存储所有备份文件的地方，这在 `target_dir` 变量中指定。我们要创建的 zip 压缩包的名称是当前的日期和时间，通过 `time.strftime()` 函数生成。它还会有 `.zip` 扩展名，并存储在 `target_dir` 目录中。
+我们首先导入 `os` 和 `time` 模块来使用它们。然后，我们在 `source` 列表中指定需要备份的文件和目录。目标目录是我们存储所有备份文件的地方，这在 `target_dir` 变量中指定。我们要创建的 zip 压缩包的名称是当前的日期和时间，通过 `time.strftime()` 函数生成。它还会有 `.zip` 扩展名，并存储在 `target_dir` 目录中。
 
 注意 `os.sep` 变量的使用——它根据你的操作系统给出目录分隔符，即在 GNU/Linux、Unix、macOS 中是 `'/'`，在 Windows 中是 `'\\'`。使用 `os.sep` 而不是直接使用这些字符，可以使我们的程序具有可移植性，在所有这些系统上都能正常工作。
 
@@ -50,7 +50,7 @@
 
 我们使用加法运算符创建目标 zip 文件的名称，它会_连接_字符串，即将两个字符串连接在一起并返回一个新的字符串。然后，我们创建一个字符串 `zip_command`，其中包含我们要执行的命令。你可以在 shell（GNU/Linux 终端或 DOS 提示符）中运行这个命令来检查它是否有效。
 
-我们使用的 `zip` 命令有一些可用选项，其中之一是 `-r`。`-r` 选项指定 zip 命令应该对目录进行**递归**操作，即它应该包含所有子目录和文件。选项后面跟着要创建的 zip 压缩包的名称，然后是需要备份的文件和目录列表。我们使用字符串的 `join` 方法将 `source` list 转换为字符串，这个方法我们之前已经学过如何使用了。
+我们使用的 `zip` 命令有一些可用选项，其中之一是 `-r`。`-r` 选项指定 zip 命令应该对目录进行**递归**操作，即它应该包含所有子目录和文件。选项后面跟着要创建的 zip 压缩包的名称，然后是需要备份的文件和目录列表。我们使用字符串的 `join` 方法将 `source` 列表转换为字符串，这个方法我们之前已经学过如何使用了。
 
 然后，我们最终使用 `os.system` 函数_运行_命令，该函数就像从_系统_中运行命令一样（即在 shell 中运行）——如果命令成功执行，它返回 `0`，否则返回一个错误编号。
 
@@ -74,11 +74,11 @@
 
 保存为 `backup_ver2.py`：
 
-<pre><code class="lang-python">{% include "programs/backup_ver2.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/backup_ver2.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/backup_ver2.txt" %}</code></pre>
+<pre><code>{% include "./programs/backup_ver2.txt" %}</code></pre>
 
 **工作原理**
 
@@ -88,15 +88,15 @@
 
 第二版在我做多次备份时工作良好，但当备份很多时，我发现很难区分每个备份的用途！例如，我可能对某个程序或演示文稿做了一些重大修改，然后我想将这些修改与 zip 压缩包的名称关联起来。这可以通过在 zip 压缩包的名称后面附加用户提供的注释来轻松实现。
 
-注意：以下程序不能正常工作，所以不要惊慌，请继续阅读，因为这里有一个教训。
+**警告**：以下程序不能正常工作，所以不要惊慌，请继续阅读，因为这里有一个教训。
 
 保存为 `backup_ver3.py`：
 
-<pre><code class="lang-python">{% include "programs/backup_ver3.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/backup_ver3.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/backup_ver3.txt" %}</code></pre>
+<pre><code>{% include "./programs/backup_ver3.txt" %}</code></pre>
 
 **为什么（不）能工作**
 
@@ -108,11 +108,11 @@ _这个程序不能正常工作！_ Python 说有一个语法错误（syntax err
 
 保存为 `backup_ver4.py`：
 
-<pre><code class="lang-python">{% include "programs/backup_ver4.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/backup_ver4.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/backup_ver4.txt" %}</code></pre>
+<pre><code>{% include "./programs/backup_ver4.txt" %}</code></pre>
 
 **工作原理**
 
@@ -124,7 +124,7 @@ _这个程序不能正常工作！_ Python 说有一个语法错误（syntax err
 
 第四版对大多数用户来说是一个令人满意的可用脚本，但总有改进的空间。例如，你可以通过指定 `-v` 选项为 zip 命令添加_详细程度_级别，使你的程序输出更多信息，或者使用 `-q` 选项使其_安静_。
 
-另一个可能的改进是允许在命令行中将额外的文件和目录传递给脚本。我们可以从 `sys.argv` list 中获取这些名称，并使用 `list` 类提供的 `extend` 方法将它们添加到我们的 `source` list 中。
+另一个可能的改进是允许在命令行中将额外的文件和目录传递给脚本。我们可以从 `sys.argv` 列表中获取这些名称，并使用 `list` 类提供的 `extend` 方法将它们添加到我们的 `source` 列表中。
 
 最重要的改进是不使用 `os.system` 的方式来创建归档文件，而是使用内置的 [zipfile](http://docs.python.org/3/library/zipfile.html) 或 [tarfile](http://docs.python.org/3/library/tarfile.html) 模块来创建这些归档文件。它们是标准库的一部分，已经可供你使用，无需依赖计算机上安装的 zip 程序。
 

@@ -24,7 +24,7 @@ Python 是一种简单而极简的语言。阅读一段优秀的 Python 代码�
 
 ### 自由且开源
 
-Python 是 _FLOSS_（自由/开源软件）的一个典型例子。简单来说，你可以自由地分发这个软件的副本、阅读它的源代码、对它进行修改，并将其中的一部分用于新的自由程序。FLOSS 基于知识共享的理念。这也是 Python 如此优秀的原因之一——它由一个希望让 Python 变得更好的社区创建并不断改进。
+Python 是 _FLOSS_（自由/Libre 及开源软件）的一个典型例子。简单来说，你可以自由地分发这个软件的副本、阅读它的源代码、对它进行修改，并将其中的一部分用于新的自由程序。FLOSS 基于一个共享知识的社区理念。这也是 Python 如此优秀的原因之一——它由一个希望让 Python 变得更好的社区创建并不断改进。
 
 ### 高级语言
 
@@ -60,7 +60,7 @@ Python 既支持面向过程编程，也支持面向对象编程（OOP）。在_
 
 ### 丰富的库
 
-Python 标准库确实非常庞大。它可以帮助你完成各种任务，包括正则表达式、文档生成、单元测试、线程、数据库、Web 浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV 文件、加密、GUI（图形用户界面）以及其他依赖系统的功能。请记住，所有这些功能在任何安装了 Python 的地方都是可用的。这就是 Python 的_内置电池_哲学。
+Python 标准库确实非常庞大。它可以帮助你完成各种任务，包括正则表达式、文档生成、单元测试、线程、数据库、Web 浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV 文件、加密、GUI（图形用户界面）以及其他依赖系统的功能。请记住，所有这些功能在任何安装了 Python 的地方都是可用的。这就是 Python 的_自带电池_哲学。
 
 除了标准库之外，还有许多其他高质量的库，你可以在 [Python Package Index](http://pypi.python.org/pypi) 中找到它们。
 
@@ -86,5 +86,5 @@ Python 确实是一门令人兴奋且功能强大的语言。它在性能和特�
 你可能会觉得阅读像 Eric S. Raymond（ESR）这样的大牛对 Python 的评价很有趣：
 
 - _Eric S. Raymond_ 是《大教堂与集市》的作者，也是提出_开源_一词的人。他说 [Python 已经成为他最喜欢的编程语言](http://www.python.org/about/success/esr/)。这篇文章是我第一次接触 Python 的真正灵感来源。
-- _Bruce Eckel_ 是著名的《Thinking in Java》和《Thinking in C++》的作者。他说没有哪种语言能让他比 Python 更高效。他说 Python 也许是唯一一门专注于让程序员工作更轻松的语言。阅读[完整访谈](http://www.artima.com/intv/aboutme.html)了解更多详情。
+- _Bruce Eckel_ 是著名的《Thinking in Java》（《Java 编程思想》）和《Thinking in C++》（《C++ 编程思想》）的作者。他说没有哪种语言能让他比 Python 更高效。他说 Python 也许是唯一一门专注于让程序员工作更轻松的语言。阅读[完整访谈](http://www.artima.com/intv/aboutme.html)了解更多详情。
 - _Peter Norvig_ 是知名的 Lisp 作者，也是 Google 搜索质量总监（感谢 Guido van Rossum 指出这一点）。他说 [用 Python 编程就像写伪代码一样](https://news.ycombinator.com/item?id=1803815)。他说 Python 一直是 Google 不可或缺的一部分。你实际上可以通过查看 [Google 招聘](http://www.google.com/jobs/index.html)页面来验证这个说法，该页面将 Python 知识列为软件工程师的要求之一。

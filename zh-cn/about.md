@@ -1,4 +1,4 @@
-# 附录：关于 {#colophon}
+# 附录：版本说明 {#colophon}
 
 我在创建本书时使用的几乎所有软件都是 [FLOSS](./floss.md#floss)。
 

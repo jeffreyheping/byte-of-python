@@ -6,11 +6,11 @@ Python 标准库包含大量有用的模块，是每个标准 Python 安装的�
 
 让我们探索一些有用的模块。
 
-> 注意：如果你觉得本章的主题太高级，你可以跳过本章。但是，我强烈建议在你对 Python 编程更加熟练之后回到本章。
+> **小心**：如果你觉得本章的主题太高级，你可以跳过本章。但是，我强烈建议在你对 Python 编程更加熟练之后回到本章。
 
 ## `sys` 模块 {#sys}
 
-`sys` 模块包含系统特定的功能。我们已经看到 `sys.argv` list 包含命令行参数。
+`sys` 模块包含系统特定的功能。我们已经看到 `sys.argv` **列表**包含命令行参数。
 
 假设我们想检查正在使用的 Python 软件的版本，`sys` 模块可以给我们这些信息。
 
@@ -33,11 +33,11 @@ True
 
 保存为 `stdlib_logging.py`：
 
-<pre><code class="lang-python">{% include "programs/stdlib_logging.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/stdlib_logging.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/stdlib_logging.txt" %}</code></pre>
+<pre><code>{% include "./programs/stdlib_logging.txt" %}</code></pre>
 
 `cat` 命令用于在命令行中读取 'test.log' 文件。如果 `cat` 命令不可用，你可以在文本编辑器中打开 `test.log` 文件。
 
@@ -53,7 +53,7 @@ True
 
 最后，我们可以放入用于调试、信息、警告甚至关键消息的消息。程序运行后，我们可以检查这个文件，即使没有向运行程序的用户显示任何信息，我们也能知道程序中发生了什么。
 
-## 每周模块系列 {#motw}
+## 模块周刊系列 {#motw}
 
 标准库中还有更多值得探索的内容，如[调试](http://docs.python.org/3/library/pdb.html)、
 [处理命令行选项](http://docs.python.org/3/library/argparse.html)、[正则表达式](http://docs.python.org/3/library/re.html)等等。

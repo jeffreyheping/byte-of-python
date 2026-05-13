@@ -13,3 +13,4 @@ public
 zh-build
 venv
 .vscode
+.DS_Store

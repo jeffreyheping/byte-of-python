@@ -10,11 +10,11 @@
 
 示例（保存为 `module_using_sys.py`）：
 
-<pre><code class="lang-python">{% include "programs/module_using_sys.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/module_using_sys.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/module_using_sys.txt" %}</code></pre>
+<pre><code>{% include "./programs/module_using_sys.txt" %}</code></pre>
 
 **工作原理**
 
@@ -63,11 +63,11 @@ print("Square root of 16 is", sqrt(16))
 
 示例（保存为 `module_using_name.py`）：
 
-<pre><code class="lang-python">{% include "programs/module_using_name.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/module_using_name.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/module_using_name.txt" %}</code></pre>
+<pre><code>{% include "./programs/module_using_name.txt" %}</code></pre>
 
 **工作原理**
 
@@ -79,7 +79,7 @@ print("Square root of 16 is", sqrt(16))
 
 示例（保存为 `mymodule.py`）：
 
-<pre><code class="lang-python">{% include "programs/mymodule.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/mymodule.py" %}</code></pre>
 
 上面是一个示例*模块*。如你所见，与我们通常的 Python 程序相比，它没有什么特别之处。接下来我们将看到如何在其他 Python 程序中使用这个模块。
 
@@ -87,11 +87,11 @@ print("Square root of 16 is", sqrt(16))
 
 另一个模块（保存为 `mymodule_demo.py`）：
 
-<pre><code class="lang-python">{% include "programs/mymodule_demo.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/mymodule_demo.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/mymodule_demo.txt" %}</code></pre>
+<pre><code>{% include "./programs/mymodule_demo.txt" %}</code></pre>
 
 **工作原理**
 
@@ -99,7 +99,7 @@ print("Square root of 16 is", sqrt(16))
 
 下面是一个使用 `from..import` 语法的版本（保存为 `mymodule_demo2.py`）：
 
-<pre><code class="lang-python">{% include "programs/mymodule_demo2.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/mymodule_demo2.py" %}</code></pre>
 
 `mymodule_demo2.py` 的输出与 `mymodule_demo.py` 的输出相同。
 

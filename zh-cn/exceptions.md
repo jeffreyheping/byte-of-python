@@ -2,7 +2,7 @@
 
 当你的程序中出现_异常_情况时，就会发生异常（exception）。例如，如果你要读取一个文件但文件不存在怎么办？或者如果程序运行时你不小心删除了它怎么办？这些情况使用**异常**来处理。
 
-类似地，如果你的程序中有一些无效的语句怎么办？这由 Python 来处理，它会**抛出**错误并告诉你有一个**错误**。
+类似地，如果你的程序中有一些无效的语句怎么办？这由 Python 来处理，它会**举手示意**（raise）并告诉你有一个**错误**。[^raises]
 
 ## 错误
 
@@ -38,11 +38,11 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 示例（保存为 `exceptions_handle.py`）：
 
-<pre><code class="lang-python">{% include "programs/exceptions_handle.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/exceptions_handle.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/exceptions_handle.txt" %}</code></pre>
+<pre><code>{% include "./programs/exceptions_handle.txt" %}</code></pre>
 
 **工作原理**
 
@@ -64,11 +64,11 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 示例（保存为 `exceptions_raise.py`）：
 
-<pre><code class="lang-python">{% include "programs/exceptions_raise.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/exceptions_raise.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/exceptions_raise.txt" %}</code></pre>
+<pre><code>{% include "./programs/exceptions_raise.txt" %}</code></pre>
 
 **工作原理**
 
@@ -82,11 +82,11 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 将此程序保存为 `exceptions_finally.py`：
 
-<pre><code class="lang-python">{% include "programs/exceptions_finally.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/exceptions_finally.py" %}</code></pre>
 
 输出：
 
-<pre><code>{% include "programs/exceptions_finally.txt" %}</code></pre>
+<pre><code>{% include "./programs/exceptions_finally.txt" %}</code></pre>
 
 **工作原理**
 
@@ -104,7 +104,7 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 
 保存为 `exceptions_using_with.py`：
 
-<pre><code class="lang-python">{% include "programs/exceptions_using_with.py" %}</code></pre>
+<pre><code class="lang-python">{% include "./programs/exceptions_using_with.py" %}</code></pre>
 
 **工作原理**
 
@@ -123,3 +123,5 @@ Python 抛出了一个名为 `EOFError` 的错误，这基本上意味着它在�
 我们讨论了 `try..except` 和 `try..finally` 语句的使用。我们还学习了如何创建自己的异常类型以及如何抛出异常。
 
 接下来，我们将探索 Python 标准库。
+
+[^raises]: 译者注：原文 "raises its hands" 是一个双关语——既表示"举手示意（报告问题）"，又是 Python 中 `raise`（抛出异常）的语义来源。
