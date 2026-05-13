@@ -8,11 +8,11 @@
 
 ## 阿拉伯语
 
-以下是阿拉伯语版本的链接。感谢 Ashraf Ali Khalaf 翻译了本书，你可以在 <http://www.khaledhosny.org/byte-of-python/index.html> 在线阅读全书，或者从 [sourceforge.net](http://downloads.sourceforge.net/omlx/byteofpython_arabic.pdf?use_mirror=osdn) 下载，更多信息请参见 <http://itwadi.com/byteofpython_arabi>。
+以下是阿拉伯语版本的链接。感谢 Ashraf Ali Khalaf 翻译了本书，你可以从 [sourceforge.net](http://downloads.sourceforge.net/omlx/byteofpython_arabic.pdf?use_mirror=osdn) 下载，更多信息请参见 <http://itwadi.com/byteofpython_arabi>。
 
 ## 阿塞拜疆语
 
-Jahangir Shabiyev (c.shabiev@gmail.com) 志愿将本书翻译为阿塞拜疆语。翻译正在进行中，地址为 https://www.gitbook.com/book/jahangir-sh/piton-sancmasi
+Jahangir Shabiyev (c.shabiev@gmail.com) 志愿将本书翻译为阿塞拜疆语。
 
 
 ## 巴西葡萄牙语
@@ -36,20 +36,6 @@ Moises Gomez (moisesgomezgiron@gmail.com) 志愿将本书翻译为加泰罗尼�
 > 所以，为什么不尝试翻译呢？我为之前版本的 BoP 做了翻译。
 >
 > 我的国家有两种官方语言。我选择了加泰罗尼亚语，假设其他人会将其翻译为更广泛使用的西班牙语。
-
-## 中文
-
-2017 年，时隔 11 年之后，莫伦 (i@molun.net) 基于 4.0 版本从头重新翻译了本书。翻译版本存储在 GitHub 和 Gitbook 上。他持续跟进这个翻译版本，随时准备修正翻译版 BoP 中的任何错误或疏漏。
-
-2017 年的翻译版本可在 <https://bop.molun.net> 查看。
-
-莫伦说：
-
-> 我是中国青年政治学院（CYU）的一名普通新闻专业学生。实际上，在开始翻译这本书时，我是一个 Python 编程的绝对新手。最初，这只是一时兴起，但当我完成这项工作时，我意识到一个由兴趣引发的决定竟然让我走了这么远。
->
-> 在前辈们的翻译和发达的互联网提供的大量信息的帮助下，在朋友们的帮助下，我谨慎地呈现了这个翻译版本。我只希望我的翻译工作能帮助其他 Python 新手学习。
->
-> 同时，我一直在等待大家对我的翻译的评论和建议，并随时准备修改或改进这个尚显浅薄的作品。
 
 ### 更早的中文翻译
 
@@ -107,7 +93,7 @@ Bernd Hengelein 说：
 
 ## 希腊语
 
-希腊 Ubuntu 社区[将本书翻译为希腊语](http://wiki.ubuntu-gr.org/byte-of-python-el)，用于我们在论坛上进行的在线异步 Python 课程。联系 [@savvasradevic](https://twitter.com/savvasradevic) 获取更多信息。
+希腊 Ubuntu 社区将本书翻译为希腊语，用于我们在论坛上进行的在线异步 Python 课程。联系 [@savvasradevic](https://twitter.com/savvasradevic) 获取更多信息。
 
 ## 印尼语
 
@@ -120,8 +106,6 @@ Wisnu Priyambodo (cibermen@gmail.com) 也志愿将本书翻译为印尼语。
 ## 意大利语（第一版）
 
 Enrico Morelli (mr.mlucci@gmail.com) 和 Massimo Lucci (morelli@cerm.unifi.it) 志愿将本书翻译为意大利语。
-
-意大利语翻译可在 <http://www.gentoo.it/Programmazione/byteofpython> 查看。
 
 > _Massimo Lucci 和 Enrico Morelli_ - 我们在意大利佛罗伦萨大学化学系工作。我（Massimo）是核磁共振波谱仪的服务工程师和系统管理员；Enrico 是我们 CED 以及并行/集群系统的服务工程师和系统管理员。我们大约从七年前开始用 Python 编程，在 Linux 平台上已经有十年的经验。在意大利，我们负责 Gentoo/Linux 发行版的 www.gentoo.it 网站以及核磁共振应用和会议组织管理的 www.nmr.it（目前正在建设中）。就这样！我们对你的书中使用的简洁语言印象深刻，我们认为这对于让新用户接触 Python 来说至关重要（我们想到的是在我们实验室工作的数百名学生和研究人员）。
 
@@ -171,7 +155,7 @@ Eirik Vågeskar 是挪威 [Sandvika videregående skole](http://no.wikipedia.org
 
 ## 波兰语
 
-Dominik Kozaczko (dominik@kozaczko.info) 志愿将本书翻译为波兰语。翻译正在进行中，主页地址为：[Ukąś Pythona](http://python.edu.pl/byteofpython/)。
+Dominik Kozaczko (dominik@kozaczko.info) 志愿将本书翻译为波兰语。
 
 _更新_：翻译已于 2009 年 10 月 2 日完成。感谢 Dominik、他的两名学生以及他们的朋友付出的时间和努力！
 
@@ -193,9 +177,9 @@ Vladimir Smolyar (v_2e@ukr.net) 完成了俄语翻译，地址为 <http://wombat
 
 ## 乌克兰语
 
-Averkiev Andrey (averkiyev@ukr.net) 志愿将本书翻译为俄语，也许还有乌克兰语（如果时间允许的话）。
-
 Daria JENS (jensdarya@gmail.com) 完成了乌克兰语翻译：<https://spielend-programmieren.at/byte_of_python_ukraine/>
+
+Averkiev Andrey (averkiyev@ukr.net) 志愿将本书翻译为俄语，也许还有乌克兰语（如果时间允许的话）。
 
 ## 塞尔维亚语
 
@@ -207,7 +191,7 @@ Daria JENS (jensdarya@gmail.com) 完成了乌克兰语翻译：<https://spielend
 
 ## 斯洛伐克语
 
-Albertio Ward (albertioward@gmail.com) 将本书翻译为斯洛伐克语，地址为 <http://www.fatcow.com/edu/python-swaroopch-sl/>：
+Albertio Ward (albertioward@gmail.com) 将本书翻译为斯洛伐克语。
 
 > 我们是一个名为"教育翻译"的非营利组织。我们代表一群人，主要是学生和教授，来自斯拉夫大学。这里的学生来自不同的院系：语言学、化学、生物学等。我们尝试在互联网上找到与我们和我们的大学同事相关的有趣出版物。有时我们自己找到文章；有时我们的教授帮助我们选择翻译材料。获得作者许可后，我们翻译文章并发布在我们的博客上，供同事和朋友们访问。这些翻译出版物经常帮助学生的日常学习。
 
@@ -232,4 +216,5 @@ Mikael Jacobsson (leochingkwake@gmail.com) 志愿将本书翻译为瑞典语。
 Türker SEZER (tsezer@btturk.net) 和 Bugra Cakir (bugracakir@gmail.com) 志愿将本书翻译为土耳其语。"土耳其语版本在哪里？哪怕翻译完了我们也想读。"
 
 ## 波斯语
+
 Najmeh Ghaderi (najmeh.gh.7.2008@gmail.com) 志愿将本书翻译为波斯语。翻译刚刚开始，目前正在进行中。
