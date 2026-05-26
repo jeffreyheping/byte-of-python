@@ -1,971 +1,1028 @@
 # A Byte of Python - 速查笔记
 
-> 用代码+注释简化描述整本书，配合 ASP/C# 背景类比
+> 完全遵照原书顺序，用代码+注释简化描述，配合 ASP/C# 背景类比
 
 ---
 
-## 第一部分：入门
-
-### 1. 关于 Python（语言特性概览）
+## 第1章：前言
 
 ```python
-# Python = 简洁 + 强大，像 ASP 的简洁脚本但企业级能力
-# 类比：
-#   - ASP Classic: 脚本语言，简单但缺乏结构
-#   - C#: 强类型，OOP，功能强大但语法复杂
-#   - Python: 两者优点兼顾，像 C# 一样强大，但像 ASP 一样简洁
-
-# 核心特性
+# 本书目标
 """
-1. 解释型语言（Interpreted）
-   类比：ASP，不需要编译，直接运行
-   不同于 C# 需要编译成 IL
-
-2. 动态类型（Dynamic Typing）
-   类比：ASP 的 Variant，但更智能
-   不同：不像 C# 需要声明变量类型
-
-3. 缩进语法（Indentation-based）
-   不同：不像 C#/ASP 用 {} 包裹代码块
-   Python 用缩进表示层级，像写诗一样优雅
-
-4. "自带电池"哲学（Batteries Included）
-   类似：C# 的 .NET Framework，但更全面
-   安装即拥有：文件、网络、数据库、图像处理...
-
-5. 一切皆对象
-   类比：C# 一切皆对象，但 Python 更彻底
-   数字、字符串、函数、类...都是对象
+- Python 简单又强大
+- 适合初学者，也适合有经验的程序员
+- 通过实践来学习
 """
 ```
 
-### 2. 安装与运行
+---
+
+## 第2章：关于 Python
 
 ```python
-# 安装检查
-$ python3 --version  # 查看版本，像检查 .NET Framework 版本
+# ========== Python 特性 ==========
 
-# 运行方式1：交互式解释器（类似 ASP 的 <% %> 即时执行）
+# 1. 简单且极简（Simple & Minimal）
+# 类比：像 ASP 脚本一样简单，像 C# 一样强大
+
+# 2. 易于学习（Easy to Learn）
+# 语法简洁，上手快
+
+# 3. 自由/开源（FLOSS）
+# 可以自由修改和分发
+
+# 4. 高级语言（High-Level）
+# 不用管内存管理等底层细节
+# 类比：C# 不需要手动内存管理，Python 更进一步
+
+# 5. 可移植（Portable）
+# 几乎在所有平台上都能运行：Linux, Windows, macOS...
+
+# 6. 解释型（Interpreted）
+# 无需编译，直接运行
+# 类比：ASP 无需编译，直接执行；C# 需要编译成 IL
+# Python：源代码 → 字节码 → 解释执行
+
+# 7. 面向对象（OOP）
+# 同时支持 面向过程 和 面向对象
+# 类比：C# 主要面向对象，也可以写过程式代码
+
+# 8. 可扩展（Extensible）
+# 关键部分可以用 C/C++ 写，然后给 Python 调用
+
+# 9. 可嵌入（Embeddable）
+# 可以把 Python 嵌入到 C/C++ 程序里，作为脚本语言
+
+# 10. 丰富的库（Batteries Included）
+# 标准库非常丰富：正则表达式、测试、多线程、数据库、GUI...
+# 类比：像 .NET Framework，但更丰富
+```
+
+---
+
+## 第3章：安装
+
+```python
+# ========== 安装检查 ==========
+
+# Windows
+# 访问 https://www.python.org/downloads/
+# 下载安装包，注意勾选 "Add Python to PATH"
+
+# macOS
+# 使用 Homebrew: brew install python3
+
+# Linux
+# Debian/Ubuntu: sudo apt-get install python3
+
+# 验证安装
+$ python3 --version
+# 输出类似: Python 3.6.0
+```
+
+---
+
+## 第4章：第一步
+
+```python
+# ========== 运行 Python ==========
+
+# 方式1：交互式解释器（REPL）
 $ python3
->>> print("Hello")  # 立即看到结果
+>>> print("Hello World")  # 输入后回车
+Hello World
+>>> exit()  # 或 Ctrl+D 退出
 
-# 运行方式2：脚本文件（类似 .aspx 代码后置）
+# 方式2：脚本文件
+# 保存为 hello.py
+print("Hello World")
+
+# 运行
 $ python hello.py
-# 对应 C# 的：dotnet run 或直接运行 .dll
 
-# IDE 推荐
-#   - PyCharm（类似 Visual Studio）
+# ========== 选择编辑器 ==========
+# 推荐：
+#   - PyCharm（新手友好，类似 Visual Studio）
 #   - VS Code + Python 插件
-#   - Jupyter Notebook（类似 LinqPad，适合实验）
+#   - Vim / Emacs（进阶用户）
+# 避免：Windows 记事本（不处理换行）
+
+# ========== 获取帮助 ==========
+>>> help(len)  # 查看函数帮助
+>>> help(str)  # 查看类帮助
+>>> help()     # 进入交互帮助模式
 ```
 
 ---
 
-## 第二部分：基础语法
-
-### 3. 变量与数据类型
+## 第5章：基础
 
 ```python
-# ========== 变量 ==========
-# Python 变量 = ASP/C# 变量，但不需要声明
-# 类似：JavaScript 的 var，但类型固定
+# ========== 注释 ==========
+# 这是单行注释（类似 // in C#）
 
-name = "Jeffrey"        # 字符串（str）- 像 C# 的 string
-age = 25                # 整数（int）- 像 C# 的 int
-price = 99.99           # 浮点数（float）- 像 C# 的 double
-is_active = True        # 布尔（bool）- 像 C# 的 bool（首字母大写）
-nothing = None          # 空值 - 类似 C# 的 null，但写作 None
+"""
+这是多行注释
+类似 /* */ in C#
+"""
+
+# ========== 字面常量 ==========
+5          # 整数
+3.14       # 浮点数
+"Hello"    # 字符串
+'World'    # 字符串
+
+# ========== 数字 ==========
+age = 25            # int（无大小限制，不像 C# int32）
+price = 99.99       # float
 
 # ========== 字符串 ==========
-# Python 字符串 = C# string 加强版
+s1 = '单引号'
+s2 = "双引号"
+s3 = '''三引号
+多行字符串'''
 
-s1 = '单引号'           # 类似 ASP: s1 = "单引号"
-s2 = "双引号"           # 更常用
-s3 = """多行字符串"""   # 类似 C# 的 @"多行"
-
-# 格式化（3种方式）
+# 字符串格式化
 name = "Jeffrey"
 age = 25
 
-# 方式1: % 格式化（像 C 的 printf）
-print("Name: %s, Age: %d" % (name, age))
+# 方式1: format()
+print("{} is {} years old".format(name, age))
 
-# 方式2: format 方法（像 C# 的 string.Format）
-print("Name: {}, Age: {}".format(name, age))
+# 方式2: f-string（Python 3.6+，推荐）
+print(f"{name} is {age} years old")
 
-# 方式3: f-string（Python 3.6+，最简洁）
-print(f"Name: {name}, Age: {age}")  # 推荐！
+# 转义序列
+print("Line1\nLine2")  # \n 换行
+print(r"C:\Users\name")  # r = 原始字符串，不转义
 
-# 转义字符
-path = "C:\\Users\\Jeffrey"          # \\ 转义反斜杠
-path = r"C:\Users\Jeffrey"          # r 前缀 = 原始字符串（Raw）
-newline = "Line1\nLine2"            # \n 换行
+# 字符串是不可变的（Immutable）
+# 类比：C# 的 string 也是不可变的
+s = "Hello"
+# s[0] = "h"  # 错误！
+s = "h" + s[1:]  # 只能重新赋值
 
-# ========== 数字 ==========
-a = 10           # int，无大小限制（不像 C# 的 int32）
-b = 3.14         # float
-c = 10j          # 复数（Python 独有）
-result = 10 / 3  # 除法：3.333...（总是浮点，不像 C# 需要注意）
-result = 10 // 3 # 整除：3（向下取整）
-result = 10 % 3  # 取余：1
-result = 2 ** 10  # 幂运算：1024（Python 独有简写）
-```
+# ========== 变量 ==========
+# 无需声明类型，直接赋值
+# 类比：JavaScript 的 var，但类型安全
+x = 5
+x = "Hello"  # 可以重新赋值不同类型（不推荐）
 
-### 4. 注释
-
-```python
-# 单行注释（像 // in C#）
-
+# ========== 标识符命名规则 ==========
 """
-多行注释
-类似 C# 的 /* */，但用三引号
+规则：
+1. 首字符：字母、_、或 Unicode 字符
+2. 其他字符：字母、数字、_、Unicode
+3. 大小写敏感
+4. 不能用关键字
 """
+my_var = 1
+_var = 2
+# 1var = 3  # 错误！
 
-# 文档字符串（Docstring）
-def my_function():
-    """
-    这是函数的文档字符串
-    可以用 help(my_function) 查看
-    类似 C# 的 XML 文档注释 ///
-    """
-    pass
-```
+# ========== 数据类型总结 ==========
+# 一切皆对象！（类比：C# 一切皆对象，但 Python 更彻底）
+# 数字、字符串、函数、类...都是对象
 
-### 5. 运算符与表达式
+# ========== 物理行 vs 逻辑行 ==========
+# 一行一条语句（推荐）
+print("Hello")
 
-```python
-# ========== 算术运算符 ==========
-# 类似 C#/ASP，但 ** 是 Python 独有
-a + b    # 加法
-a - b    # 减法
-a * b    # 乘法
-a / b    # 除法（总是浮点）
-a // b   # 整除（向下取整）
-a % b    # 取余
-a ** b   # 幂运算（a 的 b 次方）
+# 一行多条语句（不推荐）
+print("Hello"); print("World")
 
-# ========== 比较运算符 ==========
-# 类似 C#，但 != 而不是 <>
-a == b   # 等于
-a != b   # 不等于
-a > b    # 大于
-a < b    # 小于
-a >= b   # 大于等于
-a <= b   # 小于等于
+# 长语句换行
+s = "This is a very long string " \
+    "that spans two lines"
 
-# ========== 逻辑运算符 ==========
-# 类似 C#，但用英文单词
-True and False   # 逻辑与（类似 C# 的 &&）
-True or False    # 逻辑或（类似 C# 的 ||）
-not True         # 逻辑非（类似 C# 的 !）
-
-# ========== 赋值运算符 ==========
-# 类似 C#
-a = 5
-a += 3   # a = a + 3
-a *= 2   # a = a * 2
-
-# ========== 位运算符 ==========
-# 类似 C#
-a & b    # 按位与
-a | b    # 按位或
-a ^ b    # 按位异或
-~a       # 按位取反
-a << 2   # 左移（乘以 2^n）
-a >> 2   # 右移（除以 2^n）
-```
-
-### 6. 控制流
-
-```python
-# ========== if 语句 ==========
-# 类似 C# 的 if...else，但不用 ()
-age = 18
-
-if age < 18:
-    print("未成年")      # 缩进 = 代码块（不用 {}）
-elif age < 65:
-    print("成年人")
-else:
-    print("老年人")
-
-# 注意：Python 没有 switch，用 elif 链
-# 类比：像 ASP 的 ElseIf，但不是关键字连写
-
-# ========== while 循环 ==========
-# 类似 C# 的 while
-count = 0
-while count < 5:
-    print(count)
-    count += 1
-
-# while...else（C# 没有的语法）
-while count < 5:
-    print(count)
-else:
-    print("循环正常结束")  # 不用 break 时执行
-
-# ========== for 循环 ==========
-# 类似 C# 的 foreach，不是传统的 for
-
-# 遍历范围
-for i in range(5):       # 0, 1, 2, 3, 4
-    print(i)
-
-for i in range(1, 6):    # 1, 2, 3, 4, 5
-    print(i)
-
-for i in range(0, 10, 2): # 0, 2, 4, 6, 8（步长2）
-    print(i)
-
-# 遍历列表（类似 C# 的 foreach var）
-fruits = ["苹果", "香蕉", "橙子"]
-for fruit in fruits:
-    print(fruit)
-
-# 遍历字符串
-for char in "Python":
-    print(char)
-
-# for...else
-for item in items:
-    if item == target:
-        print("找到了")
-        break
-else:
-    print("没找到")  # 没有 break 时执行
-
-# ========== break 和 continue ==========
-# 类似 C#
-for i in range(10):
-    if i == 5:
-        break     # 跳出循环
-    if i == 3:
-        continue # 跳过本次迭代
-    print(i)
-```
-
-### 7. 数据结构
-
-```python
-# ========== 列表（List）==========
-# 类似 C# 的 List<T>，但更灵活
-
-# 创建
-fruits = ["苹果", "香蕉", "橙子"]
-numbers = list(range(5))  # [0, 1, 2, 3, 4]
-empty = []
-
-# 访问（下标从 0 开始，像 C# 数组）
-print(fruits[0])     # "苹果"
-print(fruits[-1])    # "橙子"（倒数第一）
-print(fruits[-2])    # "香蕉"（倒数第二）
-
-# 切片（Python 独有，类似 LINQ Skip/Take）
-numbers = [0, 1, 2, 3, 4, 5]
-print(numbers[1:4])   # [1, 2, 3]（索引1到3，不含4）
-print(numbers[::2])   # [0, 2, 4]（步长2）
-print(numbers[::-1])  # [5, 4, 3, 2, 1, 0]（反转）
-
-# 修改
-fruits.append("葡萄")        # 添加到末尾（类似 List.Add）
-fruits.insert(1, "草莓")    # 插入到指定位置
-fruits.remove("香蕉")       # 移除指定元素
-del fruits[0]              # 按索引删除
-popped = fruits.pop()      # 弹出并返回最后一个
-
-# 常用操作
-len(fruits)    # 长度（类似 List.Count）
-fruits.sort()  # 排序（修改原列表）
-fruits.reverse()  # 反转
-"苹果" in fruits  # 是否存在（True/False）
-fruits.count("苹果")  # 计数
-
-# ========== 元组（Tuple）==========
-# 类似 C# 的 Tuple，但语法更简洁
-
-# 创建
-point = (10, 20)           # 类似 Tuple<int, int>
-rgb = ("红", "绿", "蓝")
-single = (5,)              # 单元素元组需要逗号
-
-# 访问
-print(point[0])   # 10
-print(point[1])   # 20
-
-# 解包（Python 独有，像多返回值）
-x, y = point      # x=10, y=20
-
-# 特点：不可变（类似 string），性能更好
-# 用途：函数多返回值、坐标、固定数据结构
-
-# ========== 字典（Dictionary）==========
-# 类似 C# 的 Dictionary<TKey, TValue>
-
-# 创建
-person = {
-    "name": "Jeffrey",
-    "age": 25,
-    "city": "北京"
-}
-empty_dict = {}
-
-# 访问
-print(person["name"])      # "Jeffrey"
-print(person.get("email", "N/A"))  # 安全访问，不存在返回默认值
-
-# 修改
-person["age"] = 26         # 修改
-person["email"] = "a@b.com"  # 添加
-del person["city"]         # 删除
-
-# 遍历
-for key in person:         # 遍历键
-    print(key, person[key])
-
-for key, value in person.items():  # 遍历键值对
-    print(f"{key}: {value}")
-
-for value in person.values():      # 遍历值
-    print(value)
-
-# 常用操作
-len(person)    # 键值对数量
-"name" in person  # 是否存在键
-person.keys()  # 所有键
-person.values()  # 所有值
-person.items()  # 所有键值对
-
-# ========== 集合（Set）==========
-# 类似 C# 的 HashSet<T>
-
-# 创建
-colors = {"红", "绿", "蓝"}
-prime_set = {2, 3, 5, 7}
-
-# 特点：无序、不重复
-colors.add("黄")    # 添加
-colors.remove("红")  # 移除（不存在会报错）
-colors.discard("紫")  # 移除（不存在不报错）
-
-# 集合运算
-a = {1, 2, 3}
-b = {2, 3, 4}
-print(a | b)   # 并集：{1, 2, 3, 4}
-print(a & b)   # 交集：{2, 3}
-print(a - b)   # 差集：{1}
-print(a ^ b)   # 对称差集：{1, 4}
-
-# ========== 字符串方法 ==========
-s = "  Hello, Python!  "
-
-s.strip()      # 去除首尾空格（类似 Trim）
-s.lower()      # 转小写
-s.upper()      # 转大写
-s.startswith("Hello")  # 是否以...开头
-s.endswith("!")        # 是否以...结尾
-s.replace("Python", "World")  # 替换
-s.split(",")           # 分割（类似 Split）
-",".join(["a", "b"])   # 拼接（Join）
-s.find("Python")       # 查找位置（-1表示未找到）
-s.count("o")           # 计数
+# ========== 缩进 ==========
+# 缩进很重要！用来表示代码块
+# 类比：C# 用 {}，Python 用缩进
+if True:
+    print("True")  # 缩进4空格（推荐）
+    print("Another line")
+# else:
+#   print("False")  # 错误的缩进会导致 IndentationError
 ```
 
 ---
 
-## 第三部分：函数
-
-### 8. 函数定义与调用
+## 第6章：运算符与表达式
 
 ```python
-# ========== 基本函数 ==========
-# 类似 C# 的方法，但用 def 关键字
+# ========== 算术运算符 ==========
+a + b      # 加
+a - b      # 减
+a * b      # 乘
+a ** b     # 幂（a^b）
+a / b      # 除（总是返回浮点数）
+a // b     # 整除（向下取整）
+a % b      # 取余
 
+# ========== 比较运算符 ==========
+a < b      # 小于
+a > b      # 大于
+a <= b     # 小于等于
+a >= b     # 大于等于
+a == b     # 等于
+a != b     # 不等于
+
+# ========== 逻辑运算符 ==========
+not x      # 非（类似 !x in C#）
+x and y    # 与（类似 && in C#，短路）
+x or y     # 或（类似 || in C#，短路）
+
+# ========== 位运算符 ==========
+x << y     # 左移
+x >> y     # 右移
+x & y      # 按位与
+x | y      # 按位或
+x ^ y      # 按位异或
+~x         # 按位取反
+
+# ========== 赋值运算符 ==========
+a = 5
+a += 2     # a = a + 2
+a *= 3     # a = a * 3
+# ... 其他类似
+
+# ========== 优先级 ==========
+# 括号 > 幂 > 乘除 > 加减 > 比较 > 逻辑
+# 建议：用括号使代码更清晰
+
+# ========== 表达式示例 ==========
+length = 5
+breadth = 2
+area = length * breadth
+print("Area is", area)
+print("Perimeter is", 2 * (length + breadth))
+```
+
+---
+
+## 第7章：控制流
+
+```python
+# ========== if 语句 ==========
+number = 23
+guess = int(input("Enter an integer: "))  # 输入转整数
+
+if guess == number:
+    print("恭喜，猜对了！")
+elif guess < number:
+    print("太小了")
+else:
+    print("太大了")
+
+# 注意：Python 没有 switch 语句
+
+# ========== while 语句 ==========
+running = True
+while running:
+    s = input("Enter something: ")
+    if s == "quit":
+        break      # 跳出循环
+    if s == "skip":
+        continue   # 跳过本次
+    print("Length is", len(s))
+else:
+    print("循环正常结束（不用 break 时执行）")
+
+# ========== for 语句 ==========
+# 类比 C# foreach，不是传统 for
+
+# 遍历 range
+for i in range(1, 5):  # 1, 2, 3, 4
+    print(i)
+
+# 遍历列表
+fruits = ["apple", "banana", "mango"]
+for fruit in fruits:
+    print("Current fruit:", fruit)
+
+# else 子句
+for item in [1, 2, 3]:
+    print(item)
+else:
+    print("for 循环结束（不用 break 时执行）")
+
+# ========== break 和 continue ==========
+# break: 立即跳出循环
+# continue: 跳过本次迭代，继续下一次
+```
+
+---
+
+## 第8章：函数
+
+```python
+# ========== 函数定义 ==========
+# 用 def 关键字
 def say_hello():
-    """无参数函数"""
-    print("Hello!")
+    print("Hello World!")
 
 say_hello()  # 调用
 
-# ========== 带参数 ==========
-# 类似 C# 方法参数
+# ========== 参数 ==========
+def print_max(a, b):
+    if a > b:
+        print(a, "大")
+    else:
+        print(b, "大")
 
-def greet(name, greeting="你好"):
-    """有默认参数的函数"""
-    print(f"{greeting}, {name}!")
+print_max(3, 5)
 
-greet("Jeffrey")              # 使用默认参数
-greet("Jeffrey", "Hi")        # 覆盖默认参数
+# ========== 局部变量 ==========
+x = 50
+
+def func(x):
+    print("x is", x)
+    x = 2
+    print("Changed local x to", x)
+
+func(x)
+print("x is still", x)  # 全局 x 不变
+
+# ========== global 语句 ==========
+def func_global():
+    global x  # 声明使用全局变量
+    print("x is", x)
+    x = 2
+    print("Changed global x to", x)
+
+func_global()
+print("Now x is", x)  # 全局 x 被修改
+
+# ========== 默认参数值 ==========
+def say(message, times=1):
+    print(message * times)
+
+say("Hello")          # 用默认值
+say("World", 3)       # 覆盖默认值
+
+# 注意：默认参数必须在参数列表最后
 
 # ========== 关键字参数 ==========
-# 类似 C# 的命名参数
+def func(a, b=5, c=10):
+    print("a is", a, "b is", b, "c is", c)
 
-def connect(host, port, timeout=30):
-    pass
-
-connect(host="localhost", port=8080)  # 按名字传递
-connect(port=8080, host="localhost")  # 可以颠倒顺序
+func(3, 7)            # 位置参数
+func(25, c=24)        # 混合
+func(c=50, a=100)     # 全关键字参数（顺序无关）
 
 # ========== 可变参数 ==========
-# 类似 C# 的 params
-
+# *args: 可变数量的位置参数
 def sum_all(*numbers):
-    """*args: 接收任意数量的位置参数"""
     total = 0
     for n in numbers:
         total += n
     return total
 
-print(sum_all(1, 2, 3, 4, 5))  # 15
+sum_all(1, 2, 3)  # 6
 
+# **kwargs: 可变数量的关键字参数
 def print_info(**kwargs):
-    """**kwargs: 接收任意数量的关键字参数"""
-    for key, value in kwargs.items():
-        print(f"{key}: {value}")
+    for k, v in kwargs.items():
+        print(k, "=", v)
 
 print_info(name="Jeffrey", age=25)
 
-# ========== 返回值 ==========
-# 类似 C#
+# ========== return 语句 ==========
+def maximum(x, y):
+    if x > y:
+        return x
+    else:
+        return y
 
-def divide(a, b):
-    if b == 0:
-        return None  # 返回空值
-    return a / b
+result = maximum(5, 3)
+print("Max is", result)
 
-result = divide(10, 2)  # 5.0
-result = divide(10, 0)  # None
+# 无 return 或 return 无值，返回 None
+# None 类似 C# 的 null
 
-# 多返回值（Python 独有）
-def get_stats(numbers):
-    return min(numbers), max(numbers), sum(numbers)
+# ========== DocString（文档字符串）==========
+def print_max(x, y):
+    """打印两个数的最大值。
 
-min_val, max_val, total = get_stats([1, 2, 3, 4, 5])
+    两个值必须都是整数。
+    """
+    x = int(x)
+    y = int(y)
+    if x > y:
+        print(x, "大")
+    else:
+        print(y, "大")
 
-# ========== 变量作用域 ==========
-# 类似 C#
-
-x = "全局变量"
-
-def test_scope():
-    x = "局部变量"  # 局部变量，不会修改全局
-    print(x)  # 打印局部
-
-def test_global():
-    global x   # 声明使用全局变量
-    x = "修改全局"
-    print(x)
-
-# ========== Lambda 函数 ==========
-# 类似 C# 的 LINQ 表达式
-
-square = lambda x: x ** 2
-print(square(5))  # 25
-
-# 配合内置函数使用
-numbers = [1, 2, 3, 4, 5]
-squares = list(map(lambda x: x ** 2, numbers))
-evens = list(filter(lambda x: x % 2 == 0, numbers))
+# 查看文档
+print(print_max.__doc__)
+help(print_max)
 ```
 
 ---
 
-## 第四部分：高级特性
-
-### 9. 模块与导入
+## 第9章：模块
 
 ```python
 # ========== 导入模块 ==========
-# 类似 C# 的 using/import
-
-import os                    # 导入整个模块
-from os import getcwd        # 导入特定函数
-from os import path as op    # 重命名（as）
-from os import *             # 不推荐：导入所有
+import sys               # 导入整个模块
+from os import getcwd    # 导入特定函数
+from os import *         # 不推荐（命名冲突）
+from os import path as op  # 导入并重命名
 
 # 使用
-os.getcwd()        # 模块.函数
-getcwd()           # 直接使用
-
-# ========== 标准库常用模块 ==========
-import sys        # 系统相关（argv, path, version...）
-import os         # 操作系统（文件, 目录, 环境变量...）
-import math       # 数学运算（sqrt, pi, e...）
-import random     # 随机数（random, choice, shuffle...）
-import datetime   # 日期时间
-import json       # JSON 处理
-import re         # 正则表达式
-import urllib.request  # 网络请求
+sys.argv  # 命令行参数列表
+sys.path  # 模块搜索路径
 
 # ========== __name__ ==========
-# 类似 C# Console app 的 Main 判断
-
+# 判断是作为主程序运行，还是作为模块被导入
 if __name__ == "__main__":
-    # 直接运行此文件时执行的代码
-    print("作为主程序运行")
+    print("程序自己运行")
 else:
-    # 被导入时执行的代码
-    print("作为模块被导入")
+    print("被其他模块导入")
 
-# ========== 包（Package）==========
-# 类似 C# 的命名空间
-
-# mypackage/
-#   __init__.py
-#   module1.py
-#   module2.py
-
-from mypackage import module1
-from mypackage.module1 import my_function
-```
-
-### 10. 面向对象编程
-
-```python
-# ========== 类定义 ==========
-# 类似 C# 的 class
-
-class Person:
-    """人类（类似 C# 的 class Person）"""
-
-    # 类变量（类似 C# static 字段）
-    species = "智人"
-
-    # 构造方法（类似 C# 构造函数）
-    def __init__(self, name, age=0):
-        """初始化（__init__ 类似构造函数）"""
-        self.name = name        # 实例变量（类似字段）
-        self.age = age
-
-    # 实例方法（类似 C# 实例方法）
-    def say_hello(self):
-        return f"你好，我是{self.name}"
-
-    # __str__（类似 C# 的 ToString）
-    def __str__(self):
-        return f"Person({self.name}, {self.age})"
-
-    # 类方法（类似 C# static 方法）
-    @classmethod
-    def create_baby(cls, name):
-        return cls(name, 0)
-
-    # 静态方法（类似 C# static 方法，不访问实例）
-    @staticmethod
-    def is_adult(age):
-        return age >= 18
-
-# ========== 创建对象 ==========
-# 类似 C# 的 new
-
-person = Person("Jeffrey", 25)
-print(person.name)          # 访问属性
-print(person.say_hello())   # 调用方法
-
-# ========== 继承 ==========
-# 类似 C# 的冒号继承
-
-class Student(Person):
-    """学生类继承人类"""
-
-    def __init__(self, name, age, grade):
-        super().__init__(name, age)  # 调用父类构造
-        self.grade = grade           # 新增属性
-
-    def say_hello(self):
-        return super().say_hello() + f"，我在{self.grade}年级"
-
-# 多继承（Python 独有，C# 不支持）
-class Teacher(Person):
-    pass
-
-class TeachingAssistant(Student, Teacher):
-    pass
-
-# ========== 访问控制 ==========
-# 类似 C# 的访问修饰符，但更简单
-
-class MyClass:
-    def __init__(self):
-        self.public_var = "公开"      # 公开（默认）
-        self._protected_var = "保护"  # 受保护（惯例）
-        self.__private_var = "私有"   # 私有（名称重整）
-
-# ========== 属性（Property）==========
-# 类似 C# 的 Property
-
-class Temperature:
-    def __init__(self):
-        self._celsius = 0
-
-    @property
-    def celsius(self):
-        return self._celsius
-
-    @celsius.setter
-    def celsius(self, value):
-        if value < -273.15:
-            raise ValueError("温度不能低于绝对零度")
-        self._celsius = value
-
-    @property
-    def fahrenheit(self):
-        return self._celsius * 9/5 + 32
-
-temp = Temperature()
-temp.celsius = 25          # 像访问字段一样
-print(temp.fahrenheit)    # 77.0
-```
-
-### 11. 异常处理
-
-```python
-# ========== 异常概念 ==========
-# 类似 C# 的 try...catch
-
-try:
-    result = 10 / 0
-except ZeroDivisionError:
-    print("不能除以零")
-
-# ========== 捕获多种异常 ==========
-try:
-    value = int("abc")
-    result = 10 / 0
-except ValueError:
-    print("转换错误")
-except ZeroDivisionError:
-    print("除以零错误")
-except Exception as e:  # 捕获所有异常
-    print(f"其他错误: {e}")
-
-# ========== try...except...else...finally ==========
-# 类似 C#，但多了 else
-
-try:
-    file = open("test.txt", "r")
-except FileNotFoundError:
-    print("文件不存在")
-else:
-    content = file.read()  # 只有没有异常时执行
-    file.close()
-finally:
-    print("总是执行")  # 类似 C# 的 finally
-
-# ========== with 语句 ==========
-# 类似 C# 的 using，简化资源管理
-
-# 旧写法
-file = open("test.txt", "r")
-try:
-    content = file.read()
-finally:
-    file.close()
-
-# 新写法（推荐）
-with open("test.txt", "r") as file:
-    content = file.read()
-# 自动关闭文件
-
-# ========== 抛出异常 ==========
-# 类似 C# 的 throw
-
-raise ValueError("无效的值")
-raise Exception("自定义错误")
-
-# 自定义异常
-class MyException(Exception):
-    pass
-
-# ========== 常用异常类型 ==========
-ValueError      # 值错误（类似参数验证失败）
-TypeError       # 类型错误
-KeyError        # 字典键不存在
-IndexError      # 列表索引越界
-FileNotFoundError  # 文件不存在
-AttributeError  # 属性不存在
-```
-
-### 12. 文件操作
-
-```python
-# ========== 读写文本文件 ==========
-# 类似 C# 的 File 类
-
-# 读取
-with open("test.txt", "r", encoding="utf-8") as f:
-    content = f.read()        # 读取全部
-    lines = f.readlines()     # 读取所有行
-    line = f.readline()      # 读取一行
-
-# 逐行读取（推荐）
-with open("test.txt", "r") as f:
-    for line in f:
-        print(line.strip())
-
-# 写入
-with open("test.txt", "w", encoding="utf-8") as f:
-    f.write("Hello\n")        # 写入字符串
-    f.writelines(["Line1\n", "Line2\n"])  # 写入多行
-
-# 追加
-with open("test.txt", "a") as f:
-    f.write("追加内容\n")
-
-# ========== 文件模式 ==========
-# "r"  - 读（默认）
-# "w"  - 写（覆盖）
-# "a"  - 追加
-# "x"  - 新建（文件存在则报错）
-# "b"  - 二进制模式
-# "t"  - 文本模式（默认）
-# 组合："rb", "wb", "r+b"
-
-# ========== JSON 处理 ==========
-import json
-
-data = {"name": "Jeffrey", "age": 25}
-
-# 序列化（类似 C# 的 JsonConvert.SerializeObject）
-json_str = json.dumps(data, ensure_ascii=False, indent=2)
-
-# 反序列化
-data = json.loads(json_str)
-
-# 文件操作
-with open("data.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-
-with open("data.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
-
-# ========== pickle（Python 对象序列化）==========
-# 类似 C# 的 BinaryFormatter，但更强
-import pickle
-
-# 序列化
-with open("data.pkl", "wb") as f:
-    pickle.dump(data, f)
-
-# 反序列化
-with open("data.pkl", "rb") as f:
-    data = pickle.load(f)
-```
-
-### 13. 列表推导式与生成器
-
-```python
-# ========== 列表推导式 ==========
-# 类似 C# 的 LINQ Select
-
-numbers = [1, 2, 3, 4, 5]
-
-# 基础用法
-squares = [x ** 2 for x in numbers]       # [1, 4, 9, 16, 25]
-
-# 带条件
-evens = [x for x in numbers if x % 2 == 0]  # [2, 4]
-
-# 复杂逻辑
-matrix = [[i * j for j in range(1, 4)] for i in range(1, 4)]
-# [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
-
-# ========== 生成器 ==========
-# 类似 C# 的 yield return
-
-def count_up_to(n):
-    i = 1
-    while i <= n:
-        yield i
-        i += 1
-
-# 使用（返回生成器对象）
-gen = count_up_to(5)
-print(next(gen))  # 1
-print(next(gen))  # 2
-
-# 迭代
-for num in count_up_to(5):
-    print(num)
-
-# ========== 字典/集合推导式 ==========
-# Python 独有
-
-# 字典推导式
-squares_dict = {x: x**2 for x in range(5)}
-# {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
-
-# 集合推导式
-squares_set = {x**2 for x in range(5)}
-# {0, 1, 4, 9, 16}
-```
-
-### 14. 装饰器
-
-```python
-# ========== 装饰器概念 ==========
-# 类似 C# 的 AOP/Attribute，但更灵活
-
-# 简单装饰器
-def my_decorator(func):
-    def wrapper(*args, **kwargs):
-        print("调用前")
-        result = func(*args, **kwargs)
-        print("调用后")
-        return result
-    return wrapper
-
-@my_decorator
+# ========== 创建你自己的模块 ==========
+# 保存为 mymodule.py
 def say_hello():
     print("Hello!")
 
-# 等价于
-say_hello = my_decorator(say_hello)
+__version__ = "0.1"
 
-# ========== 带参数的装饰器 ==========
-def repeat(times):
-    def decorator(func):
-        def wrapper(*args, **kwargs):
-            for _ in range(times):
-                func(*args, **kwargs)
-        return wrapper
-    return decorator
+# 在另一个文件导入
+import mymodule
+mymodule.say_hello()
+print("Version", mymodule.__version__)
 
-@repeat(3)
-def greet():
-    print("Hi!")
+# ========== dir() 函数 ==========
+# 列出对象的所有属性/方法
+import sys
+dir(sys)     # 列出 sys 模块的所有内容
+dir()        # 列出当前模块的内容
+a = 5
+dir()        # 现在会看到 'a'
 
-greet()  # 输出3次Hi!
-
-# ========== 内置装饰器 ==========
-@property          # 属性方法（类似 C# Property）
-@classmethod       # 类方法（类似 static 方法）
-@staticmethod      # 静态方法
+# ========== 包（Package）==========
+# 类比 C# 的命名空间
+"""
+目录结构：
+- mypackage/
+    - __init__.py（必需，表示这是个包）
+    - module1.py
+    - module2.py
+    - subpackage/
+        - __init__.py
+        - module3.py
+"""
+# 导入
+from mypackage import module1
+from mypackage.subpackage import module3
 ```
 
 ---
 
-## 第五部分：常用模式
-
-### 15. 迭代器与 enumerate/zip
+## 第10章：数据结构
 
 ```python
-# ========== enumerate ==========
-# 类似 C# 的 Enumerable.Select with index
+# ========== 列表（List）==========
+# 类似 C# 的 List<T>，但更灵活
 
-fruits = ["苹果", "香蕉", "橙子"]
+shoplist = ["apple", "mango", "carrot", "banana"]
 
-for i, fruit in enumerate(fruits, start=1):
-    print(f"{i}. {fruit}")
+# 访问
+print(shoplist[0])       # "apple"
+print(shoplist[-1])      # "banana"（倒数第一）
 
-# ========== zip ==========
-# 类似 C# 的 Zip LINQ 方法
+# 切片（类似 LINQ Skip/Take）
+print(shoplist[1:3])     # [1,2) = ["mango", "carrot"]
+print(shoplist[:])       # 复制整个列表
 
-names = ["Alice", "Bob", "Charlie"]
-scores = [85, 90, 95]
+# 修改
+shoplist.append("grape")    # 添加
+shoplist.insert(1, "strawberry")  # 插入
+shoplist.remove("mango")   # 移除
+del shoplist[0]            # 按索引删除
+shoplist.sort()            # 排序（原地修改）
 
-for name, score in zip(names, scores):
-    print(f"{name}: {score}")
+# ========== 元组（Tuple）==========
+# 类似列表，但不可变（Immutable）
+# 类比：C# 的 ValueTuple
 
-# ========== any/all ==========
-# 类似 C# 的 Any/All LINQ
+point = (2, 3)
+rgb = ("red", "green", "blue")
+
+# 访问
+print(point[0])
+
+# 解包（多返回值）
+x, y = point
+
+# 单元素元组需要逗号
+single = (5,)
+
+# ========== 字典（Dictionary）==========
+# 类似 C# 的 Dictionary<TKey, TValue>
+
+address = {
+    "Guido": "guido@python.org",
+    "Larry": "larry@wall.org",
+    "Matsumoto": "matz@ruby-lang.org"
+}
+
+# 访问
+print(address["Guido"])
+print(address.get("Unknown", "N/A"))  # 安全访问
+
+# 添加/修改
+address["Jeffrey"] = "jeffrey@example.com"
+del address["Larry"]
+
+# 遍历
+for name, email in address.items():
+    print(name, ":", email)
+
+# ========== 序列（Sequence）==========
+# 列表、元组、字符串 都是序列
+# 序列支持：索引、切片、len()、in、+、*
+
+# ========== 集合（Set）==========
+# 类似 C# 的 HashSet<T>
+
+bri = {"brazil", "russia", "india"}
+"india" in bri  # True
+bric = bri.copy()
+bric.add("china")
+bric.remove("russia")
+print(bri & bric)  # 交集
+print(bri | bric)  # 并集
+print(bri - bric)  # 差集
+
+# ========== 引用（References）==========
+# 变量是引用，不是值！
+# 类比：C# 的引用类型（class）
+
+a = [1, 2, 3]
+b = a  # b 引用同一个对象
+b.append(4)
+print(a)  # [1, 2, 3, 4]
+
+# 真正的复制
+b = a[:]  # 切片复制
+b = a.copy()  # copy 方法
+
+# ========== 更多字符串方法 ==========
+s = "Hello, Python!"
+s.startswith("Hello")  # True
+s.endswith("!")        # True
+s.find("Python")       # 7
+s.replace("Python", "World")  # "Hello, World!"
+s.split(",")           # ["Hello", " Python!"]
+", ".join(["a", "b"])  # "a, b"
+```
+
+---
+
+## 第11章：解决问题
+
+```python
+# ========== 案例：备份脚本 ==========
+# 完整开发流程：分析 → 设计 → 实现 → 测试 → 优化
+
+import os
+import time
+
+# ===== 版本1：基本功能 =====
+source = ['/home/swaroop/byte']
+target_dir = '/home/swaroop/backup'
+
+if not os.path.exists(target_dir):
+    os.mkdir(target_dir)
+
+today = target_dir + os.sep + time.strftime('%Y%m%d')
+now = time.strftime('%H%M%S')
+
+target = today + os.sep + now + '.zip'
+
+if not os.path.exists(today):
+    os.mkdir(today)
+
+zip_command = 'zip -r {0} {1}'.format(target, ' '.join(source))
+
+print('Zip command is:', zip_command)
+print('Running...')
+if os.system(zip_command) == 0:
+    print('Successful backup to', target)
+else:
+    print('Backup FAILED')
+
+# ===== 版本2：改进（日期目录）=====
+# ...
+
+# ===== 版本3：添加注释 =====
+# ...
+
+# ===== 版本4：最终版 =====
+# ...（略，代码较长，原理：添加注释、错误检查）
+
+# ========== 软件开发流程 ==========
+"""
+1. 是什么（分析）
+2. 怎么做（设计）
+3. 开始做（实现）
+4. 测试（测试与调试）
+5. 使用（运行/部署）
+6. 维护（改进）
+"""
+```
+
+---
+
+## 第12章：面向对象编程
+
+```python
+# ========== 类与对象 ==========
+# 类比 C# 的 class
+
+class Person:
+    """表示一个人。"""
+
+    # 类变量（所有实例共享）
+    population = 0
+
+    # 构造方法（类似 C# 构造函数）
+    def __init__(self, name):
+        """初始化。"""
+        self.name = name  # 实例变量
+        print("(初始化 {})".format(self.name))
+        Person.population += 1  # 访问类变量
+
+    # 析构方法（不保证立即调用）
+    def __del__(self):
+        """销毁。"""
+        print("{} 走了".format(self.name))
+        Person.population -= 1
+
+    # 方法
+    def say_hi(self):
+        """打招呼。"""
+        print("你好，我是{}".format(self.name))
+
+    # 类方法
+    @classmethod
+    def how_many(cls):
+        print("我们有 {} 个人".format(cls.population))
+
+# 创建对象
+p1 = Person("Jeffrey")
+p1.say_hi()
+Person.how_many()
+
+p2 = Person("Larry")
+Person.how_many()
+
+del p1  # 显式删除
+del p2
+
+# ========== 继承 ==========
+# 类比 C# 的 : 继承
+
+class SchoolMember:
+    """学校成员基类。"""
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print("创建 SchoolMember: {}".format(self.name))
+
+    def tell(self):
+        print("姓名:{} 年龄:{}".format(self.name, self.age), end=" ")
+
+class Teacher(SchoolMember):
+    """老师。"""
+
+    def __init__(self, name, age, salary):
+        super().__init__(name, age)  # 调用父类构造
+        self.salary = salary
+        print("创建 Teacher: {}".format(self.name))
+
+    def tell(self):
+        super().tell()  # 调用父类方法
+        print("工资: {}".format(self.salary))
+
+class Student(SchoolMember):
+    """学生。"""
+
+    def __init__(self, name, age, marks):
+        super().__init__(name, age)
+        self.marks = marks
+        print("创建 Student: {}".format(self.name))
+
+    def tell(self):
+        super().tell()
+        print("分数: {}".format(self.marks))
+
+# 使用
+t = Teacher("Smith", 40, 30000)
+s = Student("John", 20, 75)
+members = [t, s]
+
+for m in members:
+    m.tell()  # 多态！
+```
+
+---
+
+## 第13章：输入与输出
+
+```python
+# ========== 用户输入 ==========
+s = input("Enter something: ")
+print("You entered", s)
+
+# 回文判断（示例）
+def is_palindrome(s):
+    # 忽略空格、标点，大小写不敏感
+    forbidden = (" ", "!", "?", ".", ",")
+    s = s.lower()
+    filtered = []
+    for c in s:
+        if c not in forbidden:
+            filtered.append(c)
+    filtered = "".join(filtered)
+    return filtered == filtered[::-1]
+
+# ========== 文件操作 ==========
+# 写入
+poem = '''\
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+    use Python!
+'''
+
+with open("poem.txt", "w", encoding="utf-8") as f:
+    f.write(poem)
+
+# 读取
+with open("poem.txt", "r", encoding="utf-8") as f:
+    content = f.read()  # 读全部
+    # content = f.readline()  # 读一行
+    # lines = f.readlines()  # 读所有行
+
+print(content)
+
+# ========== pickle（对象持久化）==========
+import pickle
+
+# 写入
+data = {"name": "Jeffrey", "age": 25}
+with open("data.pkl", "wb") as f:
+    pickle.dump(data, f)
+
+# 读取
+with open("data.pkl", "rb") as f:
+    loaded = pickle.load(f)
+print(loaded)
+
+# ========== Unicode ==========
+# Python 3 默认 Unicode 字符串
+s = "你好，世界！"
+print(s)
+
+# 编码
+encoded = s.encode("utf-8")
+print(encoded)  # b'\xe4\xbd...'
+
+# 解码
+decoded = encoded.decode("utf-8")
+print(decoded)
+```
+
+---
+
+## 第14章：异常
+
+```python
+# ========== 错误示例 ==========
+# Print("hello")  # NameError（大小写错误）
+# 1 / 0          # ZeroDivisionError
+
+# ========== 处理异常 ==========
+try:
+    text = input("Enter something: ")
+except EOFError:
+    print("EOF Error!")
+except KeyboardInterrupt:
+    print("Canceled!")
+else:
+    print("You entered", text)
+
+# ========== 抛出异常 ==========
+class ShortInputException(Exception):
+    """自定义异常类。"""
+    def __init__(self, length, atleast):
+        Exception.__init__(self)
+        self.length = length
+        self.atleast = atleast
+
+try:
+    text = input("Enter something: ")
+    if len(text) < 3:
+        raise ShortInputException(len(text), 3)
+except ShortInputException as e:
+    print(f"ShortInput: got {e.length}, expected {e.atleast}")
+
+# ========== try...finally ==========
+# 类似 C# 的 try...finally
+
+try:
+    f = open("poem.txt")
+    while True:
+        line = f.readline()
+        if len(line) == 0:
+            break
+        print(line, end="")
+finally:
+    f.close()
+    print("文件已关闭")
+
+# ========== with 语句 ==========
+# 类似 C# 的 using（更简洁）
+
+with open("poem.txt") as f:
+    for line in f:
+        print(line, end="")
+# 自动关闭！
+```
+
+---
+
+## 第15章：标准库
+
+```python
+# ========== sys 模块 ==========
+import sys
+
+print(sys.version_info)
+# sys.version_info(major=3, minor=6, micro=0, ...)
+
+if sys.version_info.major < 3:
+    print("需要 Python 3+")
+    sys.exit(1)
+
+# ========== logging 模块 ==========
+import logging
+import os
+
+# 配置
+if os.name == "nt":
+    logfile = os.path.join("C:\\", "test.log")
+else:
+    logfile = os.path.join(os.getenv("HOME"), "test.log")
+
+logging.basicConfig(
+    level=logging.INFO,
+    filename=logfile,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+logging.info("开始")
+logging.warning("警告")
+logging.error("错误")
+
+# ========== 更多标准库 ==========
+"""
+- os: 操作系统接口
+- shutil: 文件操作
+- re: 正则表达式
+- urllib: 网络请求
+- json: JSON 处理
+- datetime: 日期时间
+- random: 随机数
+- math: 数学
+- argparse: 命令行参数
+"""
+```
+
+---
+
+## 第16章：更多
+
+```python
+# ========== 传递元组（多返回值）==========
+def get_error_details():
+    return (2, "details")
+
+errnum, errstr = get_error_details()
+print(errnum, errstr)
+
+# 快速交换
+a, b = 5, 10
+a, b = b, a
+
+# ========== 特殊方法 ==========
+# __init__, __del__, __str__, __repr__, __lt__, __getitem__, __len__...
+
+class MyClass:
+    def __init__(self, x):
+        self.x = x
+
+    def __str__(self):
+        return f"MyClass({self.x})"
+
+# ========== Lambda 形式 ==========
+# 类似 C# 的 lambda 表达式
+
+points = [ (1,2), (4,1), (5,-3), (10,0) ]
+points.sort(key=lambda p: p[1])  # 按y坐标排序
+print(points)
+
+# ========== 列表推导式 ==========
+# 类似 LINQ Select
 
 numbers = [1, 2, 3, 4, 5]
+squares = [x**2 for x in numbers]
+evens = [x for x in numbers if x % 2 == 0]
 
-any_positive = any(n > 0 for n in numbers)  # True
-all_positive = all(n > 0 for n in numbers)  # True
-```
+# ========== * 和 ** 接收参数 ==========
+def powersum(power, *args):
+    total = 0
+    for i in args:
+        total += i ** power
+    return total
 
-### 16. 实用技巧
+powersum(2, 1, 2, 3)  # 14
 
-```python
-# ========== 解包 ==========
-# 类似 C# 7 的元组解构
+# ========== assert 语句 ==========
+x = 5
+assert x > 0, "x 必须大于0"
+# assert x > 10, "x 太小了"  # 抛出 AssertionError
 
-a, b, c = [1, 2, 3]
-first, *rest, last = [1, 2, 3, 4, 5]  # first=1, rest=[2,3,4], last=5
+# ========== 装饰器 ==========
+# 类似 C# 的 AOP/属性
 
-# ========== 链式比较 ==========
-# Python 独有
+def log(func):
+    def wrapper(*args, **kwargs):
+        print(f"调用 {func.__name__}")
+        return func(*args, **kwargs)
+    return wrapper
 
-if 0 < x < 10:       # 类似 0 < x && x < 10
-    print("x 在0-10之间")
+@log
+def add(a, b):
+    return a + b
 
-# ========== 三元运算符 ==========
-# 类似 C# 的 ?:
-
-age = 20
-status = "成年" if age >= 18 else "未成年"
-
-# ========== assert ==========
-# 类似 C# 的 Debug.Assert
-
-assert age >= 18, "必须成年"  # 失败时抛出 AssertionError
-
-# ========== 交换变量 ==========
-# Python 独有简写
-
-a, b = 5, 10
-a, b = b, a  # 不需要 temp
-
-# ========== * 和 ** 解包 ==========
-# 类似 C# 的 params展开
-
-numbers = [1, 2, 3]
-print(*numbers)  # 1 2 3
-
-dict1 = {"a": 1, "b": 2}
-dict2 = {"c": 3, **dict1}  # 合并字典
+print(add(2, 3))  # 先打印 "调用 add"，再返回5
 ```
 
 ---
 
-## 附录：ASP/C# 到 Python 对照速查
+## 第17章：接下来做什么
+
+```python
+# ========== 建议项目 ==========
+"""
+1. 命令行通讯录程序（使用类、字典、pickle）
+2. 替换命令工具（类似 sed/replace）
+3. 个人待办事项管理
+
+其他方向：
+- Web 开发：Flask, Django
+- 数据分析：Pandas, NumPy
+- 机器学习：TensorFlow, scikit-learn
+- GUI 开发：PyQt, Kivy
+- 自动化脚本
+"""
+
+# ========== 进阶资源 ==========
+"""
+- Python 官方文档
+- Python Cookbook
+- Python Module of the Week
+- Flask Mega-Tutorial
+"""
+```
+
+---
+
+## 附录：C#/ASP 到 Python 速查表
 
 | C#/ASP | Python | 说明 |
 |--------|---------|------|
-| `int x = 5;` | `x = 5` | 无需声明类型 |
-| `string.Format()` | `f"{}"` 或 `.format()` | 字符串格式化 |
-| `if (x > 0) {}` | `if x > 0:` | 无括号，冒号结束 |
-| `for (int i=0; i<5; i++)` | `for i in range(5):` | 更简洁 |
-| `foreach (var item in list)` | `for item in list:` | 无类型声明 |
+| `int x = 5;` | `x = 5` | 变量赋值，无需类型 |
+| `string s = "hello";` | `s = "hello"` | 字符串 |
+| `if (x > 0) {}` | `if x > 0:` | if 语句 |
+| `for (int i=0; i<5; i++)` | `for i in range(5):` | 循环 |
+| `foreach (var item in list)` | `for item in list:` | 遍历 |
+| `class MyClass {}` | `class MyClass:` | 类定义 |
+| `public void Method()` | `def method(self):` | 方法 |
 | `Console.WriteLine()` | `print()` | 输出 |
-| `class MyClass {}` | `class MyClass:` | 冒号代替括号 |
-| `public void Method()` | `def method(self):` | self 必须 |
-| `try {} catch {}` | `try: except:` | else/finally可选 |
+| `Console.ReadLine()` | `input()` | 输入 |
+| `try {} catch {}` | `try: except:` | 异常 |
 | `throw new Exception()` | `raise Exception()` | 抛出异常 |
-| `using (var f = new FileStream())` | `with open() as f:` | 上下文管理 |
+| `using (var f = ...)` | `with open(...) as f:` | 资源管理 |
 | `Dictionary<K,V>` | `dict` | 字典 |
 | `List<T>` | `list` | 列表 |
-| `Tuple<T1,T2>` | `tuple` | 元组 |
 | `HashSet<T>` | `set` | 集合 |
-
----
-
-## 总结：Python vs C#/ASP
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                      Python 哲学                        │
-├─────────────────────────────────────────────────────────┤
-│  简洁优先   │ 用更少的代码做更多的事                     │
-│  可读性强   │ 缩进即结构，代码即文档                     │
-│  动态类型   │ 不用声明，灵活高效                         │
-│  自带电池   │ 标准库丰富，开箱即用                       │
-│  万物皆对象 │ 统一的设计哲学                            │
-│  多种范式   │ 面向过程 + 面向对象 + 函数式              │
-└─────────────────────────────────────────────────────────┘
-
-类比记忆：
-- 像 C# 一样强大：完整的 OOP、异常、模块、标准库
-- 像 ASP 一样简洁：无需编译、无需声明、交互执行
-- 比两者都优雅：缩进语法、列表推导、简洁语法
-```
-
----
-
-> 📚 完整学习建议：
-> 1. 先用 Jupyter Notebook 实践每个概念
-> 2. 尝试用 Python 重写你之前的 ASP/C# 项目
-> 3. 学习 Flask/Django 做 Web 开发
-> 4. 探索数据分析（Pandas）或机器学习（TensorFlow）
+| `Tuple<T1,T2>` | `tuple` | 元组 |
+| `return null` | `return None` | 空值 |
+| `string.Format("{0}", x)` | `f"{x}"` 或 `.format(x)` | 字符串格式化 |
+| `x?.y` | `x.y if x else None` | 空值传播（需要手动） |
+| `nameof(MyClass)` | `MyClass.__name__` | 获取名称 |
